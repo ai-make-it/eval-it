@@ -20,10 +20,10 @@ cd "$(dirname "$0")"
 
 [ -f deploy.conf ] && . ./deploy.conf
 
-SG_HOST="${SG_HOST:-es43.siteground.eu}"
+SG_HOST="${SG_HOST:-ssh.ai-make.it}"
 SG_PORTA="${SG_PORTA:-18765}"
 SG_UTENTE="${SG_UTENTE:-}"
-SG_CHIAVE="${SG_CHIAVE:-$HOME/.ssh/siteground}"
+SG_CHIAVE="${SG_CHIAVE:-$HOME/.ssh/siteground-ai-make-it}"
 SG_REMOTO="${SG_REMOTO:-www/ai-make.it/public_html/dizionario}"
 
 rosso() { printf '\033[31m%s\033[0m\n' "$*" >&2; }

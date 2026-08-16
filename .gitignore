@@ -1,0 +1,10 @@
+config.yaml
+results/*.jsonl
+*.csv
+!prompts/pairs.csv
+# il dizionario genera i suoi csv, e sono dati pubblicati
+!dizionario/dist/*.csv
+!dizionario/sito/dati/*.csv
+__pycache__/
+*.pyc
+.env

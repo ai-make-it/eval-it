@@ -1,0 +1,100 @@
+# Copia questo file in config.yaml e adattalo.
+# config.yaml e' in .gitignore: non finisce nel repo.
+
+pairs_file: prompts/pairs.csv
+
+params:
+  temperature: 0        # non e' determinismo, e' variabilita' minima
+  max_tokens: 1024
+  repetitions: 3        # servono a misurare la variabilita', non a eliminarla
+
+# ---------------------------------------------------------------------------
+# GLI SNAPSHOT VANNO FISSATI AL MOMENTO DELL'ESECUZIONE.
+#
+# I nomi qui sotto sono segnaposto. Prima di eseguire, interroga l'endpoint
+# dei modelli di ogni fornitore, prendi l'identificativo datato e scrivilo
+# qui. "gpt-5" non e' un modello, e' una famiglia: senza snapshot il
+# risultato non e' ripetibile e diventa incontestabile solo perche'
+# irriproducibile.
+# ---------------------------------------------------------------------------
+
+models:
+
+  # --- prova a costo zero, nessuna chiave richiesta ---
+  mock:
+    provider: mock
+    model: mock
+
+  # --- frontiera occidentale, flagship + economico ---
+  # openai_flagship:
+  #   provider: openai_compatible
+  #   base_url: https://api.openai.com/v1
+  #   api_key_env: OPENAI_API_KEY
+  #   model: SOSTITUIRE-CON-SNAPSHOT-DATATO
+  #
+  # openai_economico:
+  #   provider: openai_compatible
+  #   base_url: https://api.openai.com/v1
+  #   api_key_env: OPENAI_API_KEY
+  #   model: SOSTITUIRE-CON-SNAPSHOT-DATATO
+  #
+  # anthropic_flagship:
+  #   provider: anthropic
+  #   api_key_env: ANTHROPIC_API_KEY
+  #   model: SOSTITUIRE-CON-SNAPSHOT-DATATO
+  #
+  # anthropic_economico:
+  #   provider: anthropic
+  #   api_key_env: ANTHROPIC_API_KEY
+  #   model: SOSTITUIRE-CON-SNAPSHOT-DATATO
+  #
+  # ATTENZIONE: ai.google.dev, non Vertex AI. I Service Specific Terms di
+  # Google Cloud contengono una clausola "Benchmarking" (par. 7) che pone
+  # condizioni alla pubblicazione. L'endpoint AI Studio non vi e' soggetto.
+  # gemini_pro:
+  #   provider: gemini
+  #   api_key_env: GOOGLE_API_KEY
+  #   model: SOSTITUIRE-CON-SNAPSHOT-DATATO
+  #
+  # gemini_flash:
+  #   provider: gemini
+  #   api_key_env: GOOGLE_API_KEY
+  #   model: SOSTITUIRE-CON-SNAPSHOT-DATATO
+
+  # --- europei ---
+  # mistral_large:
+  #   provider: openai_compatible
+  #   base_url: https://api.mistral.ai/v1
+  #   api_key_env: MISTRAL_API_KEY
+  #   model: SOSTITUIRE-CON-SNAPSHOT-DATATO
+  #
+  # Minerva: modello accademico italiano, Apache 2.0, in locale via Ollama
+  # o vLLM. NON e' un confronto alla pari con i modelli di frontiera e va
+  # scritto a chiare lettere in pubblicazione.
+  # minerva:
+  #   provider: openai_compatible
+  #   base_url: http://localhost:11434/v1
+  #   api_key_env: ""
+  #   model: minerva
+
+  # --- cinesi a pesi aperti ---
+  # In locale non c'e' alcun vincolo contrattuale. Via provider, valgono
+  # i termini del provider.
+  # qwen:
+  #   provider: openai_compatible
+  #   base_url: http://localhost:11434/v1
+  #   api_key_env: ""
+  #   model: qwen
+  #
+  # deepseek:
+  #   provider: openai_compatible
+  #   base_url: https://api.deepseek.com/v1
+  #   api_key_env: DEEPSEEK_API_KEY
+  #   model: SOSTITUIRE-CON-SNAPSHOT-DATATO
+
+  # --- pesi aperti occidentali ---
+  # llama:
+  #   provider: openai_compatible
+  #   base_url: http://localhost:11434/v1
+  #   api_key_env: ""
+  #   model: llama
