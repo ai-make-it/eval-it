@@ -1,0 +1,23 @@
+id: "025"
+slug: parametri
+termine: "Parametri"
+settimana: 3
+gruppo: "Architettura e agenti"
+inglese:
+  - "parameters"
+cos_e: >-
+  I numeri interni del modello, regolati durante l'addestramento, che
+  determinano il suo comportamento. Quando si dice "un modello da 70
+  miliardi", si parla di quelli.
+perche_conta: >-
+  Danno un'idea approssimativa della capacità e un'idea molto precisa
+  delle risorse necessarie per farlo girare.
+errore_comune: >-
+  Usarli come misura di qualità. Un modello più piccolo ma addestrato
+  meglio batte regolarmente uno più grande, e la corsa ai numeri è finita
+  da un pezzo.
+vedi_anche:
+  - inferenza
+  - quantizzazione
+  - distillazione
+revisione: 1

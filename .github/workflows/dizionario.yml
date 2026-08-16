@@ -1,0 +1,49 @@
+name: dizionario
+
+on:
+  push:
+    paths:
+      - "dizionario/**"
+      - ".github/workflows/dizionario.yml"
+  pull_request:
+    paths:
+      - "dizionario/**"
+      - ".github/workflows/dizionario.yml"
+
+defaults:
+  run:
+    working-directory: dizionario
+
+jobs:
+  valida:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install pyyaml
+
+      - name: Validazione del dataset
+        run: python src/validate.py
+
+      - name: dist/ deve essere allineato al sorgente
+        run: |
+          python src/build.py
+          if ! git diff --quiet -- dist/; then
+            echo "::error::dist/ non e' allineato a voci/. Lancia python src/build.py e includi il risultato nella PR."
+            git diff --stat -- dist/
+            exit 1
+          fi
+
+      - name: sito/ deve essere allineato al sorgente
+        run: |
+          python src/sito.py
+          if ! git diff --quiet -- sito/; then
+            echo "::error::sito/ non e' allineato a voci/. Lancia python src/sito.py e includi il risultato nella PR."
+            git diff --stat -- sito/
+            exit 1
+          fi
+
+      - name: Nessun collegamento interno rotto
+        run: python src/collegamenti.py

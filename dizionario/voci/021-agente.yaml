@@ -1,0 +1,24 @@
+id: "021"
+slug: agente
+termine: "Agente"
+settimana: 3
+gruppo: "Architettura e agenti"
+inglese:
+  - "agent"
+cos_e: >-
+  Un sistema in cui il modello non risponde e basta, ma decide i propri
+  passi successivi, usa strumenti, osserva il risultato e continua fino a
+  chiudere un obiettivo.
+perche_conta: >-
+  Sposta il modello da "produce testo" a "compie azioni", e con le azioni
+  arrivano conseguenze reali. Cambia completamente il profilo di rischio e
+  il modo in cui va valutato.
+errore_comune: >-
+  Usare la parola per indicare qualsiasi cosa. Un chatbot con un prompt
+  elaborato non è un agente: l'elemento discriminante è che sia il sistema
+  a decidere la sequenza dei passi, non chi l'ha programmato.
+vedi_anche:
+  - uso-di-strumenti
+  - orchestrazione
+  - fallimento-a-cascata
+revisione: 1

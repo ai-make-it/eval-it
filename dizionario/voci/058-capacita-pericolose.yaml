@@ -1,0 +1,25 @@
+id: "058"
+slug: capacita-pericolose
+termine: "Capacità pericolose"
+settimana: 6
+gruppo: "Sicurezza"
+inglese:
+  - "dangerous capabilities"
+cos_e: >-
+  Quello che un modello è in grado di fare se qualcuno glielo chiede nel
+  modo giusto, indipendentemente da quello che normalmente accetta di
+  fare. Supporto ad attacchi informatici, disinformazione su scala,
+  conoscenze applicabili ad armi.
+perche_conta: >-
+  È la distinzione fondamentale della valutazione di sicurezza: cosa il
+  modello può fare è una proprietà stabile, cosa accetta di fare dipende
+  da protezioni che si possono aggirare.
+errore_comune: >-
+  Valutare solo il comportamento predefinito. Un modello che rifiuta
+  educatamente ma possiede la capacità è un modello pericoloso a cui manca
+  solo un prompt migliore.
+vedi_anche:
+  - red-teaming
+  - kill-chain
+  - scheda-del-modello
+revisione: 1

@@ -1,0 +1,23 @@
+id: "014"
+slug: catena-di-ragionamento
+termine: "Catena di ragionamento"
+settimana: 2
+gruppo: "Come si usa"
+inglese:
+  - "chain of thought"
+  - "CoT"
+cos_e: >-
+  Chiedere al modello di esplicitare i passaggi prima di dare la risposta
+  finale, invece di rispondere di getto. I modelli recenti spesso lo fanno
+  da soli.
+perche_conta: >-
+  Su compiti che richiedono più passaggi migliora sensibilmente
+  l'accuratezza, e rende visibile dove il ragionamento si rompe.
+errore_comune: >-
+  Leggere i passaggi come la spiegazione di come il modello è arrivato
+  alla risposta. Sono testo generato come tutto il resto, possono essere
+  plausibili e non corrispondere al processo effettivo.
+vedi_anche:
+  - prompt
+  - interpretabilita
+revisione: 1

@@ -1,0 +1,24 @@
+id: "024"
+slug: inferenza
+termine: "Inferenza"
+settimana: 3
+gruppo: "Architettura e agenti"
+inglese:
+  - "inference"
+cos_e: >-
+  L'esecuzione del modello per produrre una risposta, distinta
+  dall'addestramento che l'ha creato. È quello che succede ogni volta che
+  si invia un prompt.
+perche_conta: >-
+  È il costo ricorrente. L'addestramento si paga una volta, l'inferenza si
+  paga a ogni richiesta, e in un sistema in produzione è quella a
+  determinare se i conti tornano.
+errore_comune: >-
+  Ragionare sul costo per richiesta invece che sul costo per compito
+  completato. Un modello più caro che risolve al primo tentativo può
+  costare meno di uno economico che va richiamato tre volte.
+vedi_anche:
+  - parametri
+  - quantizzazione
+  - token
+revisione: 1

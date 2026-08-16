@@ -1,0 +1,26 @@
+id: "054"
+slug: rlhf
+termine: "RLHF"
+settimana: 6
+gruppo: "Sicurezza"
+inglese:
+  - "reinforcement learning from human feedback"
+cos_e: >-
+  Apprendimento per rinforzo dal feedback umano. Delle persone esprimono
+  preferenze tra risposte alternative, da quelle preferenze si costruisce
+  un modello del gradimento, e il modello principale viene addestrato a
+  massimizzarlo.
+perche_conta: >-
+  È la tecnica che ha reso i modelli linguistici utilizzabili da chiunque,
+  ed è la ragione principale per cui rispondono in modo utile invece di
+  continuare il testo.
+errore_comune: >-
+  Considerarla una soluzione al problema dell'allineamento. Ottimizza
+  quello che le persone approvano leggendo una risposta, che non è la
+  stessa cosa di quello che è corretto: da qui vengono sia la sicofanzia
+  sia parte delle allucinazioni sicure di sé.
+vedi_anche:
+  - allineamento
+  - post-addestramento
+  - sicofanzia
+revisione: 1

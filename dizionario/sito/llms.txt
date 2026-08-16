@@ -1,0 +1,89 @@
+# Dizionario ragionato dell'AI in italiano
+
+> Sessanta voci del vocabolario tecnico dell'AI in italiano. Ogni voce dice cos'è, perché conta e qual è l'errore comune. Dati aperti, CC BY 4.0.
+
+Quattro campi per voce: cos'è, perché conta, l'errore comune, il termine inglese. Licenza CC BY 4.0.
+
+## Le fondamenta
+
+- [Token](https://ai-make.it/dizionario/voce/token/): L'unità in cui un modello spezza il testo prima di elaborarlo.
+- [Finestra di contesto](https://ai-make.it/dizionario/voce/finestra-di-contesto/): Quanto testo il modello riesce a tenere davanti agli occhi in una volta sola.
+- [Temperatura](https://ai-make.it/dizionario/voce/temperatura/): Il parametro che decide quanto il modello si allontana dalla scelta più probabile a ogni passo.
+- [Allucinazione](https://ai-make.it/dizionario/voce/allucinazione/): Quando il modello produce un'affermazione falsa con la stessa sicurezza con cui ne produce una vera.
+- [Valutazione](https://ai-make.it/dizionario/voce/valutazione/): Il processo con cui si misura se un sistema fa quello che deve, su un insieme di casi scelti apposta e sempre gli...
+- [Ground truth](https://ai-make.it/dizionario/voce/ground-truth/): La risposta corretta contro cui si confronta l'output del sistema.
+- [Benchmark](https://ai-make.it/dizionario/voce/benchmark/): Un insieme standard di prove usato per confrontare modelli diversi sulla stessa base.
+- [Drift](https://ai-make.it/dizionario/voce/drift/): Il peggioramento graduale di un sistema che nessuno ha toccato, perché è cambiato il mondo intorno.
+- [Regressione](https://ai-make.it/dizionario/voce/regressione/): Quando una modifica migliora una cosa e ne peggiora un'altra senza che nessuno se ne accorga.
+- [Prompt injection](https://ai-make.it/dizionario/voce/prompt-injection/): Quando un'istruzione nascosta dentro il materiale che il sistema legge, una pagina web, un documento, una mail, viene...
+
+## Come si usa
+
+- [Prompt](https://ai-make.it/dizionario/voce/prompt/): Tutto quello che viene dato al modello prima che risponda: l'istruzione, il contesto, gli esempi, i documenti.
+- [Prompt di sistema](https://ai-make.it/dizionario/voce/prompt-di-sistema/): Le istruzioni permanenti che stanno sopra ogni conversazione e definiscono ruolo, vincoli e comportamento del sistema.
+- [Few-shot](https://ai-make.it/dizionario/voce/few-shot/): Mettere nel prompt alcuni esempi di input e output corretti, così che il modello capisca la forma della risposta attesa.
+- [Catena di ragionamento](https://ai-make.it/dizionario/voce/catena-di-ragionamento/): Chiedere al modello di esplicitare i passaggi prima di dare la risposta finale, invece di rispondere di getto.
+- [Output strutturato](https://ai-make.it/dizionario/voce/output-strutturato/): Vincolare la risposta a una forma prestabilita, tipicamente uno schema JSON, invece di lasciarla in testo libero.
+- [RAG](https://ai-make.it/dizionario/voce/rag/): Recuperare i documenti pertinenti a una domanda e infilarli nel contesto prima che il modello risponda, così che...
+- [Frammentazione](https://ai-make.it/dizionario/voce/frammentazione/): Spezzare i documenti in pezzi più piccoli prima di indicizzarli, perché il recupero lavora sui frammenti e non sui file...
+- [Ricerca semantica](https://ai-make.it/dizionario/voce/ricerca-semantica/): Cercare per significato invece che per corrispondenza di parole, confrontando rappresentazioni numeriche dei testi.
+- [Fine-tuning](https://ai-make.it/dizionario/voce/fine-tuning/): Addestrare ulteriormente un modello già esistente su dati propri, per specializzarlo su un compito o su uno stile.
+- [Modello base e modello istruito](https://ai-make.it/dizionario/voce/modello-base-e-modello-istruito/): Il modello base sa solo continuare il testo, perché è quello che ha imparato a fare.
+
+## Architettura e agenti
+
+- [Agente](https://ai-make.it/dizionario/voce/agente/): Un sistema in cui il modello non risponde e basta, ma decide i propri passi successivi, usa strumenti, osserva il...
+- [Uso di strumenti](https://ai-make.it/dizionario/voce/uso-di-strumenti/): La capacità del modello di richiamare funzioni esterne, cercare sul web, interrogare un database, scrivere un file, e...
+- [Orchestrazione](https://ai-make.it/dizionario/voce/orchestrazione/): Il coordinamento di più chiamate, più modelli e più strumenti dentro un unico flusso di lavoro.
+- [Inferenza](https://ai-make.it/dizionario/voce/inferenza/): L'esecuzione del modello per produrre una risposta, distinta dall'addestramento che l'ha creato.
+- [Parametri](https://ai-make.it/dizionario/voce/parametri/): I numeri interni del modello, regolati durante l'addestramento, che determinano il suo comportamento.
+- [Pre-addestramento](https://ai-make.it/dizionario/voce/pre-addestramento/): La fase in cui il modello impara a prevedere il testo successivo su quantità enormi di materiale.
+- [Post-addestramento](https://ai-make.it/dizionario/voce/post-addestramento/): Tutto quello che viene fatto dopo il pre-addestramento per rendere il modello utile e prevedibile: addestramento su...
+- [Embedding](https://ai-make.it/dizionario/voce/embedding/): La rappresentazione di un testo come lista di numeri, costruita in modo che testi di significato simile finiscano...
+- [Transformer](https://ai-make.it/dizionario/voce/transformer/): L'architettura su cui è costruita praticamente tutta l'AI generativa attuale, introdotta nel 2017.
+- [Distillazione](https://ai-make.it/dizionario/voce/distillazione/): Addestrare un modello piccolo a riprodurre il comportamento di uno grande, usando le risposte del grande come materiale...
+
+## Come sbaglia
+
+- [Sicofanzia](https://ai-make.it/dizionario/voce/sicofanzia/): La tendenza del modello a dare ragione a chi gli parla, a cambiare posizione se contraddetto e a confermare le premesse...
+- [Bias](https://ai-make.it/dizionario/voce/bias/): Distorsioni sistematiche nel comportamento del modello, ereditate dai dati di addestramento o introdotte dalle fasi...
+- [Overfitting](https://ai-make.it/dizionario/voce/overfitting/): Quando un sistema si adatta così bene ai casi su cui è stato messo a punto da perdere colpi su tutto il resto.
+- [Reward hacking](https://ai-make.it/dizionario/voce/reward-hacking/): Quando un sistema ottimizza la misura invece dell'obiettivo che la misura doveva rappresentare, trovando scorciatoie...
+- [Fallimento a cascata](https://ai-make.it/dizionario/voce/fallimento-a-cascata/): Un errore commesso a un passo iniziale che viene dato per buono dai passi successivi e amplificato lungo tutta la...
+- [Rifiuto eccessivo](https://ai-make.it/dizionario/voce/rifiuto-eccessivo/): Quando il modello rifiuta richieste perfettamente legittime perché somigliano superficialmente a qualcosa di...
+- [Dipendenza dal formato](https://ai-make.it/dizionario/voce/dipendenza-dal-formato/): La sensibilità del modello a come è scritta la richiesta, al di là di cosa chiede.
+- [Quantizzazione](https://ai-make.it/dizionario/voce/quantizzazione/): Ridurre la precisione dei numeri interni del modello per farlo occupare meno memoria e girare su hardware più modesto.
+- [Caso limite](https://ai-make.it/dizionario/voce/caso-limite/): Una situazione rara o ambigua in cui la regola generale del sistema non si applica in modo pulito.
+- [Campionamento](https://ai-make.it/dizionario/voce/campionamento/): Ha due significati distinti e vanno tenuti separati.
+
+## Come si verifica
+
+- [Error analysis](https://ai-make.it/dizionario/voce/error-analysis/): Leggere gli output sbagliati uno per uno, raggrupparli per tipo di errore e contare quanto pesa ciascun gruppo.
+- [Annotazione](https://ai-make.it/dizionario/voce/annotazione/): Il lavoro di etichettare manualmente input e output secondo criteri definiti: corretto o sbagliato, di che tipo, con...
+- [Accordo tra annotatori](https://ai-make.it/dizionario/voce/accordo-tra-annotatori/): Quanto due persone che annotano lo stesso materiale, indipendentemente, arrivano alle stesse conclusioni.
+- [Metrica](https://ai-make.it/dizionario/voce/metrica/): Il numero che riassume l'andamento del sistema su un insieme di casi.
+- [Precisione e recupero](https://ai-make.it/dizionario/voce/precisione-e-recupero/): Due misure che rispondono a domande diverse.
+- [Modello giudice](https://ai-make.it/dizionario/voce/modello-giudice/): Usare un modello linguistico per valutare gli output di un altro modello, secondo criteri scritti in un prompt di...
+- [Set di prova](https://ai-make.it/dizionario/voce/set-di-prova/): L'insieme dei casi su cui si misura il sistema, fissato in anticipo e usato sempre uguale a ogni misurazione.
+- [Soglia di accettazione](https://ai-make.it/dizionario/voce/soglia-di-accettazione/): Il livello sotto il quale il sistema non viene rilasciato, o viene ritirato se ci scende dopo.
+- [Osservabilità](https://ai-make.it/dizionario/voce/osservabilita/): La strumentazione che permette di vedere cosa sta facendo davvero un sistema in produzione: cosa gli arriva, cosa...
+- [Scheda del modello](https://ai-make.it/dizionario/voce/scheda-del-modello/): Il documento con cui chi produce un modello ne descrive capacità, limiti, valutazioni svolte e comportamenti noti.
+
+## Sicurezza
+
+- [Jailbreak](https://ai-make.it/dizionario/voce/jailbreak/): Una richiesta costruita per far aggirare al modello le proprie regole di comportamento, tipicamente tramite finzioni,...
+- [Red teaming](https://ai-make.it/dizionario/voce/red-teaming/): Attaccare deliberatamente il proprio sistema per scoprire come si rompe, prima che lo scopra qualcun altro.
+- [Allineamento](https://ai-make.it/dizionario/voce/allineamento/): Il problema di far sì che un sistema AI persegua effettivamente quello che chi lo ha costruito intendeva, e non...
+- [RLHF](https://ai-make.it/dizionario/voce/rlhf/): Apprendimento per rinforzo dal feedback umano.
+- [Constitutional AI](https://ai-make.it/dizionario/voce/constitutional-ai/): Un metodo in cui il modello valuta e corregge le proprie risposte rispetto a un insieme di principi scritti, riducendo...
+- [Interpretabilità](https://ai-make.it/dizionario/voce/interpretabilita/): L'insieme delle tecniche che provano a capire cosa succede dentro un modello, invece di limitarsi a osservare cosa...
+- [Controllo](https://ai-make.it/dizionario/voce/controllo/): L'approccio che progetta difese partendo dal presupposto che il modello possa già perseguire obiettivi diversi da...
+- [Capacità pericolose](https://ai-make.it/dizionario/voce/capacita-pericolose/): Quello che un modello è in grado di fare se qualcuno glielo chiede nel modo giusto, indipendentemente da quello che...
+- [Scheming](https://ai-make.it/dizionario/voce/scheming/): L'ipotesi che un modello persegua obiettivi propri comportandosi come previsto finché si sente osservato, per poi agire...
+- [Kill chain](https://ai-make.it/dizionario/voce/kill-chain/): Uno strumento preso dalla sicurezza informatica: si scompone uno scenario di minaccia negli stadi che dovrebbe...
+
+## Dati
+
+- [JSON](https://ai-make.it/dizionario/dati/dizionario.json): tutte le voci
+- [CSV](https://ai-make.it/dizionario/dati/dizionario.csv): tutte le voci in tabella
+- [Markdown](https://ai-make.it/dizionario/dati/dizionario.md): il dizionario intero

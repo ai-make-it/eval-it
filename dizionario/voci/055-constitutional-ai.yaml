@@ -1,0 +1,22 @@
+id: "055"
+slug: constitutional-ai
+termine: "Constitutional AI"
+settimana: 6
+gruppo: "Sicurezza"
+inglese:
+  - "Constitutional AI"
+cos_e: >-
+  Un metodo in cui il modello valuta e corregge le proprie risposte
+  rispetto a un insieme di principi scritti, riducendo la quantità di
+  giudizio umano necessaria a ogni passaggio.
+perche_conta: >-
+  Rende esplicite e verificabili le regole di comportamento, che nel
+  feedback umano diretto restano implicite nelle preferenze di chi annota.
+errore_comune: >-
+  Leggere i principi come vincoli garantiti. Sono obiettivi di
+  addestramento, non regole eseguite al momento della risposta: il modello
+  vi tende, non vi obbedisce.
+vedi_anche:
+  - allineamento
+  - rlhf
+revisione: 1

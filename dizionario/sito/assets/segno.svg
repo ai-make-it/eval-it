@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img"
+     aria-label="Dizionario ragionato dell'AI">
+  <rect width="32" height="32" rx="6" fill="#a8432a"/>
+  <rect x="7" y="8" width="13" height="3.5" rx="1.5" fill="#fbfaf8"/>
+  <rect x="7" y="15" width="18" height="2.5" rx="1.25" fill="#fbfaf8" opacity=".72"/>
+  <rect x="7" y="20.5" width="18" height="2.5" rx="1.25" fill="#fbfaf8" opacity=".72"/>
+</svg>

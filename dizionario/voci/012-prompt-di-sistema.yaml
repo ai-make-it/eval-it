@@ -1,0 +1,24 @@
+id: "012"
+slug: prompt-di-sistema
+termine: "Prompt di sistema"
+settimana: 2
+gruppo: "Come si usa"
+inglese:
+  - "system prompt"
+cos_e: >-
+  Le istruzioni permanenti che stanno sopra ogni conversazione e
+  definiscono ruolo, vincoli e comportamento del sistema. L'utente di
+  solito non le vede.
+perche_conta: >-
+  È il posto dove si mettono le regole che non devono cambiare, ed è anche
+  il posto dove finisce, negli anni, tutta la complessità accumulata di un
+  sistema. Un prompt di sistema che nessuno rilegge da sei mesi è un
+  debito.
+errore_comune: >-
+  Considerarlo una protezione. Non è un confine di sicurezza: contenuto
+  ostile nel resto del contesto può contraddirlo.
+vedi_anche:
+  - prompt
+  - prompt-injection
+  - finestra-di-contesto
+revisione: 1

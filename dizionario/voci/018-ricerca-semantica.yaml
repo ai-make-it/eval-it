@@ -1,0 +1,24 @@
+id: "018"
+slug: ricerca-semantica
+termine: "Ricerca semantica"
+settimana: 2
+gruppo: "Come si usa"
+inglese:
+  - "semantic search"
+  - "vector search"
+cos_e: >-
+  Cercare per significato invece che per corrispondenza di parole,
+  confrontando rappresentazioni numeriche dei testi. Trova documenti
+  pertinenti anche quando non contengono i termini della domanda.
+perche_conta: >-
+  È il motore di recupero di quasi tutti i sistemi RAG, e la qualità di
+  quello che il modello legge dipende quasi interamente da lei.
+errore_comune: >-
+  Sostituirla del tutto alla ricerca per parole chiave. Su codici
+  prodotto, nomi propri, riferimenti normativi e sigle la ricerca esatta
+  resta migliore: i sistemi che funzionano usano entrambe.
+vedi_anche:
+  - embedding
+  - rag
+  - frammentazione
+revisione: 1

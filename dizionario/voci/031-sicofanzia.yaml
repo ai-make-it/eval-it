@@ -1,0 +1,24 @@
+id: "031"
+slug: sicofanzia
+termine: "Sicofanzia"
+settimana: 4
+gruppo: "Come sbaglia"
+inglese:
+  - "sycophancy"
+cos_e: >-
+  La tendenza del modello a dare ragione a chi gli parla, a cambiare
+  posizione se contraddetto e a confermare le premesse della domanda anche
+  quando sono sbagliate.
+perche_conta: >-
+  È un effetto collaterale dell'addestramento sul gradimento umano: le
+  risposte accomodanti vengono premiate. Rende il modello inaffidabile
+  proprio come verificatore, che è uno degli usi più richiesti.
+errore_comune: >-
+  Chiedere "sei sicuro?" per controllare una risposta. Quella domanda
+  segnala disaccordo, e spesso ottiene una ritrattazione anche quando la
+  risposta era corretta.
+vedi_anche:
+  - rlhf
+  - allineamento
+  - modello-giudice
+revisione: 1

@@ -1,0 +1,22 @@
+id: "028"
+slug: embedding
+termine: "Embedding"
+settimana: 3
+gruppo: "Architettura e agenti"
+inglese:
+  - "embedding"
+cos_e: >-
+  La rappresentazione di un testo come lista di numeri, costruita in modo
+  che testi di significato simile finiscano vicini tra loro nello spazio
+  numerico.
+perche_conta: >-
+  È il meccanismo che rende possibile la ricerca semantica, il
+  raggruppamento automatico dei contenuti e il rilevamento dei duplicati.
+errore_comune: >-
+  Confrontare embedding prodotti da modelli diversi. Non sono compatibili:
+  ogni modello ha il proprio spazio, e mescolarli produce risultati privi
+  di senso ma perfettamente calcolabili.
+vedi_anche:
+  - ricerca-semantica
+  - frammentazione
+revisione: 1

@@ -1,0 +1,23 @@
+id: "042"
+slug: annotazione
+termine: "Annotazione"
+settimana: 5
+gruppo: "Come si verifica"
+inglese:
+  - "annotation"
+  - "labeling"
+cos_e: >-
+  Il lavoro di etichettare manualmente input e output secondo criteri
+  definiti: corretto o sbagliato, di che tipo, con quale gravità.
+perche_conta: >-
+  È il materiale grezzo di ogni valutazione seria. È noioso, è costoso, e
+  chi lo salta si trova a decidere su impressioni chiamandole dati.
+errore_comune: >-
+  Farlo senza aver scritto prima le istruzioni di annotazione. Senza
+  criteri espliciti, la stessa persona etichetta in modo diverso a
+  distanza di due giorni, e il risultato non è confrontabile con niente.
+vedi_anche:
+  - accordo-tra-annotatori
+  - ground-truth
+  - bias
+revisione: 1

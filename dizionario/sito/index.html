@@ -1,0 +1,795 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dizionario ragionato dell&#x27;AI in italiano | ai-make.it</title>
+<meta name="description" content="Sessanta voci del vocabolario tecnico dell&#x27;AI in italiano. Ogni voce dice cos&#x27;è, perché conta e qual è l&#x27;errore comune. Dati aperti, CC BY 4.0.">
+<link rel="canonical" href="https://ai-make.it/dizionario/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dizionario ragionato dell&#x27;AI in italiano | ai-make.it">
+<meta property="og:description" content="Sessanta voci del vocabolario tecnico dell&#x27;AI in italiano. Ogni voce dice cos&#x27;è, perché conta e qual è l&#x27;errore comune. Dati aperti, CC BY 4.0.">
+<meta property="og:url" content="https://ai-make.it/dizionario/">
+<meta property="og:site_name" content="ai-make.it">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="assets/segno.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/dizionario.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "@id": "https://ai-make.it/dizionario/#dizionario",
+  "name": "Dizionario ragionato dell'AI in italiano",
+  "description": "Sessanta voci del vocabolario tecnico dell'AI in italiano. Ogni voce dice cos'è, perché conta e qual è l'errore comune. Dati aperti, CC BY 4.0.",
+  "url": "https://ai-make.it/dizionario/",
+  "inLanguage": "it",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "hasDefinedTerm": [
+    {
+      "@type": "DefinedTerm",
+      "name": "Token",
+      "termCode": "token",
+      "url": "https://ai-make.it/dizionario/voce/token/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Finestra di contesto",
+      "termCode": "finestra-di-contesto",
+      "url": "https://ai-make.it/dizionario/voce/finestra-di-contesto/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Temperatura",
+      "termCode": "temperatura",
+      "url": "https://ai-make.it/dizionario/voce/temperatura/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Allucinazione",
+      "termCode": "allucinazione",
+      "url": "https://ai-make.it/dizionario/voce/allucinazione/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Valutazione",
+      "termCode": "valutazione",
+      "url": "https://ai-make.it/dizionario/voce/valutazione/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Ground truth",
+      "termCode": "ground-truth",
+      "url": "https://ai-make.it/dizionario/voce/ground-truth/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Benchmark",
+      "termCode": "benchmark",
+      "url": "https://ai-make.it/dizionario/voce/benchmark/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Drift",
+      "termCode": "drift",
+      "url": "https://ai-make.it/dizionario/voce/drift/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Regressione",
+      "termCode": "regressione",
+      "url": "https://ai-make.it/dizionario/voce/regressione/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Prompt injection",
+      "termCode": "prompt-injection",
+      "url": "https://ai-make.it/dizionario/voce/prompt-injection/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Prompt",
+      "termCode": "prompt",
+      "url": "https://ai-make.it/dizionario/voce/prompt/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Prompt di sistema",
+      "termCode": "prompt-di-sistema",
+      "url": "https://ai-make.it/dizionario/voce/prompt-di-sistema/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Few-shot",
+      "termCode": "few-shot",
+      "url": "https://ai-make.it/dizionario/voce/few-shot/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Catena di ragionamento",
+      "termCode": "catena-di-ragionamento",
+      "url": "https://ai-make.it/dizionario/voce/catena-di-ragionamento/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Output strutturato",
+      "termCode": "output-strutturato",
+      "url": "https://ai-make.it/dizionario/voce/output-strutturato/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "RAG",
+      "termCode": "rag",
+      "url": "https://ai-make.it/dizionario/voce/rag/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Frammentazione",
+      "termCode": "frammentazione",
+      "url": "https://ai-make.it/dizionario/voce/frammentazione/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Ricerca semantica",
+      "termCode": "ricerca-semantica",
+      "url": "https://ai-make.it/dizionario/voce/ricerca-semantica/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Fine-tuning",
+      "termCode": "fine-tuning",
+      "url": "https://ai-make.it/dizionario/voce/fine-tuning/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Modello base e modello istruito",
+      "termCode": "modello-base-e-modello-istruito",
+      "url": "https://ai-make.it/dizionario/voce/modello-base-e-modello-istruito/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Agente",
+      "termCode": "agente",
+      "url": "https://ai-make.it/dizionario/voce/agente/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Uso di strumenti",
+      "termCode": "uso-di-strumenti",
+      "url": "https://ai-make.it/dizionario/voce/uso-di-strumenti/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Orchestrazione",
+      "termCode": "orchestrazione",
+      "url": "https://ai-make.it/dizionario/voce/orchestrazione/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Inferenza",
+      "termCode": "inferenza",
+      "url": "https://ai-make.it/dizionario/voce/inferenza/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Parametri",
+      "termCode": "parametri",
+      "url": "https://ai-make.it/dizionario/voce/parametri/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Pre-addestramento",
+      "termCode": "pre-addestramento",
+      "url": "https://ai-make.it/dizionario/voce/pre-addestramento/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Post-addestramento",
+      "termCode": "post-addestramento",
+      "url": "https://ai-make.it/dizionario/voce/post-addestramento/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Embedding",
+      "termCode": "embedding",
+      "url": "https://ai-make.it/dizionario/voce/embedding/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Transformer",
+      "termCode": "transformer",
+      "url": "https://ai-make.it/dizionario/voce/transformer/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Distillazione",
+      "termCode": "distillazione",
+      "url": "https://ai-make.it/dizionario/voce/distillazione/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Sicofanzia",
+      "termCode": "sicofanzia",
+      "url": "https://ai-make.it/dizionario/voce/sicofanzia/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Bias",
+      "termCode": "bias",
+      "url": "https://ai-make.it/dizionario/voce/bias/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Overfitting",
+      "termCode": "overfitting",
+      "url": "https://ai-make.it/dizionario/voce/overfitting/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Reward hacking",
+      "termCode": "reward-hacking",
+      "url": "https://ai-make.it/dizionario/voce/reward-hacking/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Fallimento a cascata",
+      "termCode": "fallimento-a-cascata",
+      "url": "https://ai-make.it/dizionario/voce/fallimento-a-cascata/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Rifiuto eccessivo",
+      "termCode": "rifiuto-eccessivo",
+      "url": "https://ai-make.it/dizionario/voce/rifiuto-eccessivo/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Dipendenza dal formato",
+      "termCode": "dipendenza-dal-formato",
+      "url": "https://ai-make.it/dizionario/voce/dipendenza-dal-formato/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Quantizzazione",
+      "termCode": "quantizzazione",
+      "url": "https://ai-make.it/dizionario/voce/quantizzazione/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Caso limite",
+      "termCode": "caso-limite",
+      "url": "https://ai-make.it/dizionario/voce/caso-limite/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Campionamento",
+      "termCode": "campionamento",
+      "url": "https://ai-make.it/dizionario/voce/campionamento/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Error analysis",
+      "termCode": "error-analysis",
+      "url": "https://ai-make.it/dizionario/voce/error-analysis/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Annotazione",
+      "termCode": "annotazione",
+      "url": "https://ai-make.it/dizionario/voce/annotazione/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Accordo tra annotatori",
+      "termCode": "accordo-tra-annotatori",
+      "url": "https://ai-make.it/dizionario/voce/accordo-tra-annotatori/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Metrica",
+      "termCode": "metrica",
+      "url": "https://ai-make.it/dizionario/voce/metrica/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Precisione e recupero",
+      "termCode": "precisione-e-recupero",
+      "url": "https://ai-make.it/dizionario/voce/precisione-e-recupero/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Modello giudice",
+      "termCode": "modello-giudice",
+      "url": "https://ai-make.it/dizionario/voce/modello-giudice/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Set di prova",
+      "termCode": "set-di-prova",
+      "url": "https://ai-make.it/dizionario/voce/set-di-prova/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Soglia di accettazione",
+      "termCode": "soglia-di-accettazione",
+      "url": "https://ai-make.it/dizionario/voce/soglia-di-accettazione/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Osservabilità",
+      "termCode": "osservabilita",
+      "url": "https://ai-make.it/dizionario/voce/osservabilita/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Scheda del modello",
+      "termCode": "scheda-del-modello",
+      "url": "https://ai-make.it/dizionario/voce/scheda-del-modello/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Jailbreak",
+      "termCode": "jailbreak",
+      "url": "https://ai-make.it/dizionario/voce/jailbreak/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Red teaming",
+      "termCode": "red-teaming",
+      "url": "https://ai-make.it/dizionario/voce/red-teaming/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Allineamento",
+      "termCode": "allineamento",
+      "url": "https://ai-make.it/dizionario/voce/allineamento/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "RLHF",
+      "termCode": "rlhf",
+      "url": "https://ai-make.it/dizionario/voce/rlhf/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Constitutional AI",
+      "termCode": "constitutional-ai",
+      "url": "https://ai-make.it/dizionario/voce/constitutional-ai/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Interpretabilità",
+      "termCode": "interpretabilita",
+      "url": "https://ai-make.it/dizionario/voce/interpretabilita/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Controllo",
+      "termCode": "controllo",
+      "url": "https://ai-make.it/dizionario/voce/controllo/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Capacità pericolose",
+      "termCode": "capacita-pericolose",
+      "url": "https://ai-make.it/dizionario/voce/capacita-pericolose/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Scheming",
+      "termCode": "scheming",
+      "url": "https://ai-make.it/dizionario/voce/scheming/"
+    },
+    {
+      "@type": "DefinedTerm",
+      "name": "Kill chain",
+      "termCode": "kill-chain",
+      "url": "https://ai-make.it/dizionario/voce/kill-chain/"
+    }
+  ]
+}
+</script>
+</head>
+<body data-radice="">
+<a class="salta" href="#contenuto">Salta al contenuto</a>
+
+<header class="testata">
+  <div class="riga">
+    <a class="marchio" href="./">Dizionario ragionato dell'AI</a>
+    <nav aria-label="Navigazione principale">
+      <a href="./">Le voci</a>
+      <a href="inglese/">Dall'inglese</a>
+      <a href="dati/">I dati</a>
+    </nav>
+  </div>
+      <form class="cerca" action="./" method="get" role="search">
+        <label class="via" for="q">Cerca una voce</label>
+        <input id="q" name="q" type="search" autocomplete="off"
+               placeholder="Cerca: token, drift, RAG..." value="">
+      </form>
+</header>
+
+<main id="contenuto">
+<div class="apertura">
+  <h1>Dizionario ragionato dell'AI in italiano</h1>
+  <p class="occhiello">Sessanta voci del vocabolario tecnico dell'intelligenza artificiale, scritte in italiano da chi lavora con questi sistemi, non tradotte da un glossario inglese.</p>
+  <p>Ogni voce ha quattro campi, sempre gli stessi: cos'è, perché conta,
+     l'errore comune, il termine inglese. Il terzo campo è il controllo di
+     qualità: se su una voce non si riesce a scrivere l'errore comune, la
+     voce non è pronta. Un dizionario di definizioni corrette lo si trova
+     già tradotto ovunque.</p>
+  <p class="conteggio">60 voci in sei gruppi.
+     <a href="inglese/">Se il termine lo hai incontrato in inglese, parti da qui.</a></p>
+</div>
+
+<p class="esito" role="status" hidden></p>
+
+<section class="gruppo contenitore" id="gruppo-1">
+  <div class="capo">
+    <h2><a href="gruppo/1-le-fondamenta/">Le fondamenta</a></h2>
+    <p>I termini che servono per leggere tutti gli altri.</p>
+  </div>
+  <ul class="elenco">
+<li class="scheda filtrabile" data-testo="token token token le fondamenta l&#x27;unita in cui un modello spezza il testo prima di elaborarlo. non e una parola e non e una lettera, sta in mezzo.">
+  <a class="termine" href="voce/token/">Token</a>
+  <span class="ing">token</span>
+  <p>L'unità in cui un modello spezza il testo prima di elaborarlo.</p>
+</li>
+<li class="scheda filtrabile" data-testo="finestra di contesto finestra-di-contesto context window le fondamenta quanto testo il modello riesce a tenere davanti agli occhi in una volta sola. ci sta dentro tutto: le istruzioni, i documenti forniti, la conversazione fino a quel punto e la risposta che deve ancora scrivere.">
+  <a class="termine" href="voce/finestra-di-contesto/">Finestra di contesto</a>
+  <span class="ing">context window</span>
+  <p>Quanto testo il modello riesce a tenere davanti agli occhi in una volta sola.</p>
+</li>
+<li class="scheda filtrabile" data-testo="temperatura temperatura temperature le fondamenta il parametro che decide quanto il modello si allontana dalla scelta piu probabile a ogni passo. vicino a zero prende quasi sempre la continuazione piu probabile, alzandola diventa piu vario e piu imprevedibile.">
+  <a class="termine" href="voce/temperatura/">Temperatura</a>
+  <span class="ing">temperature</span>
+  <p>Il parametro che decide quanto il modello si allontana dalla scelta più probabile a ogni passo.</p>
+</li>
+<li class="scheda filtrabile" data-testo="allucinazione allucinazione hallucination le fondamenta quando il modello produce un&#x27;affermazione falsa con la stessa sicurezza con cui ne produce una vera. non sta mentendo e non si e rotto: sta facendo quello che fa sempre, cioe generare la continuazione piu plausibile.">
+  <a class="termine" href="voce/allucinazione/">Allucinazione</a>
+  <span class="ing">hallucination</span>
+  <p>Quando il modello produce un'affermazione falsa con la stessa sicurezza con cui ne produce una vera.</p>
+</li>
+<li class="scheda filtrabile" data-testo="valutazione valutazione eval, evaluation le fondamenta il processo con cui si misura se un sistema fa quello che deve, su un insieme di casi scelti apposta e sempre gli stessi. non e provarlo qualche volta e vedere se sembra andare.">
+  <a class="termine" href="voce/valutazione/">Valutazione</a>
+  <span class="ing">eval, evaluation</span>
+  <p>Il processo con cui si misura se un sistema fa quello che deve, su un insieme di casi scelti apposta e sempre gli...</p>
+</li>
+<li class="scheda filtrabile" data-testo="ground truth ground-truth ground truth le fondamenta la risposta corretta contro cui si confronta l&#x27;output del sistema. in italiano si dice a volte &quot;verita di riferimento&quot;, ma quasi nessuno lo dice.">
+  <a class="termine" href="voce/ground-truth/">Ground truth</a>
+  <span class="ing">ground truth</span>
+  <p>La risposta corretta contro cui si confronta l'output del sistema.</p>
+</li>
+<li class="scheda filtrabile" data-testo="benchmark benchmark benchmark le fondamenta un insieme standard di prove usato per confrontare modelli diversi sulla stessa base. sono le tabelle che compaiono a ogni annuncio di un modello nuovo.">
+  <a class="termine" href="voce/benchmark/">Benchmark</a>
+  <span class="ing">benchmark</span>
+  <p>Un insieme standard di prove usato per confrontare modelli diversi sulla stessa base.</p>
+</li>
+<li class="scheda filtrabile" data-testo="drift drift drift, model drift, data drift le fondamenta il peggioramento graduale di un sistema che nessuno ha toccato, perche e cambiato il mondo intorno. cambiano i dati in ingresso, cambiano le abitudini di chi lo usa, cambia il modello sotto quando il fornitore lo aggiorna.">
+  <a class="termine" href="voce/drift/">Drift</a>
+  <span class="ing">drift, model drift, data drift</span>
+  <p>Il peggioramento graduale di un sistema che nessuno ha toccato, perché è cambiato il mondo intorno.</p>
+</li>
+<li class="scheda filtrabile" data-testo="regressione regressione regression le fondamenta quando una modifica migliora una cosa e ne peggiora un&#x27;altra senza che nessuno se ne accorga. un prompt riscritto, un aggiornamento del modello, un parametro spostato.">
+  <a class="termine" href="voce/regressione/">Regressione</a>
+  <span class="ing">regression</span>
+  <p>Quando una modifica migliora una cosa e ne peggiora un'altra senza che nessuno se ne accorga.</p>
+</li>
+<li class="scheda filtrabile" data-testo="prompt injection prompt-injection prompt injection le fondamenta quando un&#x27;istruzione nascosta dentro il materiale che il sistema legge, una pagina web, un documento, una mail, viene eseguita come se fosse un comando dell&#x27;utente.">
+  <a class="termine" href="voce/prompt-injection/">Prompt injection</a>
+  <span class="ing">prompt injection</span>
+  <p>Quando un'istruzione nascosta dentro il materiale che il sistema legge, una pagina web, un documento, una mail, viene...</p>
+</li>
+  </ul>
+</section>
+<section class="gruppo contenitore" id="gruppo-2">
+  <div class="capo">
+    <h2><a href="gruppo/2-come-si-usa/">Come si usa</a></h2>
+    <p>Il vocabolario di chi lavora con i modelli.</p>
+  </div>
+  <ul class="elenco">
+<li class="scheda filtrabile" data-testo="prompt prompt prompt come si usa tutto quello che viene dato al modello prima che risponda: l&#x27;istruzione, il contesto, gli esempi, i documenti. non e solo la domanda che si scrive nella casella.">
+  <a class="termine" href="voce/prompt/">Prompt</a>
+  <span class="ing">prompt</span>
+  <p>Tutto quello che viene dato al modello prima che risponda: l'istruzione, il contesto, gli esempi, i documenti.</p>
+</li>
+<li class="scheda filtrabile" data-testo="prompt di sistema prompt-di-sistema system prompt come si usa le istruzioni permanenti che stanno sopra ogni conversazione e definiscono ruolo, vincoli e comportamento del sistema. l&#x27;utente di solito non le vede.">
+  <a class="termine" href="voce/prompt-di-sistema/">Prompt di sistema</a>
+  <span class="ing">system prompt</span>
+  <p>Le istruzioni permanenti che stanno sopra ogni conversazione e definiscono ruolo, vincoli e comportamento del sistema.</p>
+</li>
+<li class="scheda filtrabile" data-testo="few-shot few-shot few-shot prompting come si usa mettere nel prompt alcuni esempi di input e output corretti, cosi che il modello capisca la forma della risposta attesa. con zero esempi si parla di zero-shot.">
+  <a class="termine" href="voce/few-shot/">Few-shot</a>
+  <span class="ing">few-shot prompting</span>
+  <p>Mettere nel prompt alcuni esempi di input e output corretti, così che il modello capisca la forma della risposta attesa.</p>
+</li>
+<li class="scheda filtrabile" data-testo="catena di ragionamento catena-di-ragionamento chain of thought, cot come si usa chiedere al modello di esplicitare i passaggi prima di dare la risposta finale, invece di rispondere di getto. i modelli recenti spesso lo fanno da soli.">
+  <a class="termine" href="voce/catena-di-ragionamento/">Catena di ragionamento</a>
+  <span class="ing">chain of thought, CoT</span>
+  <p>Chiedere al modello di esplicitare i passaggi prima di dare la risposta finale, invece di rispondere di getto.</p>
+</li>
+<li class="scheda filtrabile" data-testo="output strutturato output-strutturato structured output come si usa vincolare la risposta a una forma prestabilita, tipicamente uno schema json, invece di lasciarla in testo libero.">
+  <a class="termine" href="voce/output-strutturato/">Output strutturato</a>
+  <span class="ing">structured output</span>
+  <p>Vincolare la risposta a una forma prestabilita, tipicamente uno schema JSON, invece di lasciarla in testo libero.</p>
+</li>
+<li class="scheda filtrabile" data-testo="rag rag retrieval-augmented generation come si usa recuperare i documenti pertinenti a una domanda e infilarli nel contesto prima che il modello risponda, cosi che risponda su quelli invece che a memoria.">
+  <a class="termine" href="voce/rag/">RAG</a>
+  <span class="ing">retrieval-augmented generation</span>
+  <p>Recuperare i documenti pertinenti a una domanda e infilarli nel contesto prima che il modello risponda, così che...</p>
+</li>
+<li class="scheda filtrabile" data-testo="frammentazione frammentazione chunking come si usa spezzare i documenti in pezzi piu piccoli prima di indicizzarli, perche il recupero lavora sui frammenti e non sui file interi.">
+  <a class="termine" href="voce/frammentazione/">Frammentazione</a>
+  <span class="ing">chunking</span>
+  <p>Spezzare i documenti in pezzi più piccoli prima di indicizzarli, perché il recupero lavora sui frammenti e non sui file...</p>
+</li>
+<li class="scheda filtrabile" data-testo="ricerca semantica ricerca-semantica semantic search, vector search come si usa cercare per significato invece che per corrispondenza di parole, confrontando rappresentazioni numeriche dei testi. trova documenti pertinenti anche quando non contengono i termini della domanda.">
+  <a class="termine" href="voce/ricerca-semantica/">Ricerca semantica</a>
+  <span class="ing">semantic search, vector search</span>
+  <p>Cercare per significato invece che per corrispondenza di parole, confrontando rappresentazioni numeriche dei testi.</p>
+</li>
+<li class="scheda filtrabile" data-testo="fine-tuning fine-tuning fine-tuning come si usa addestrare ulteriormente un modello gia esistente su dati propri, per specializzarlo su un compito o su uno stile.">
+  <a class="termine" href="voce/fine-tuning/">Fine-tuning</a>
+  <span class="ing">fine-tuning</span>
+  <p>Addestrare ulteriormente un modello già esistente su dati propri, per specializzarlo su un compito o su uno stile.</p>
+</li>
+<li class="scheda filtrabile" data-testo="modello base e modello istruito modello-base-e-modello-istruito base model, instruct model come si usa il modello base sa solo continuare il testo, perche e quello che ha imparato a fare. il modello istruito ha ricevuto un addestramento successivo che gli insegna a seguire istruzioni e a comportarsi come un assistente.">
+  <a class="termine" href="voce/modello-base-e-modello-istruito/">Modello base e modello istruito</a>
+  <span class="ing">base model, instruct model</span>
+  <p>Il modello base sa solo continuare il testo, perché è quello che ha imparato a fare.</p>
+</li>
+  </ul>
+</section>
+<section class="gruppo contenitore" id="gruppo-3">
+  <div class="capo">
+    <h2><a href="gruppo/3-architettura-e-agenti/">Architettura e agenti</a></h2>
+    <p>Il vocabolario di chi costruisce.</p>
+  </div>
+  <ul class="elenco">
+<li class="scheda filtrabile" data-testo="agente agente agent architettura e agenti un sistema in cui il modello non risponde e basta, ma decide i propri passi successivi, usa strumenti, osserva il risultato e continua fino a chiudere un obiettivo.">
+  <a class="termine" href="voce/agente/">Agente</a>
+  <span class="ing">agent</span>
+  <p>Un sistema in cui il modello non risponde e basta, ma decide i propri passi successivi, usa strumenti, osserva il...</p>
+</li>
+<li class="scheda filtrabile" data-testo="uso di strumenti uso-di-strumenti tool use, function calling architettura e agenti la capacita del modello di richiamare funzioni esterne, cercare sul web, interrogare un database, scrivere un file, e usarne il risultato nella risposta.">
+  <a class="termine" href="voce/uso-di-strumenti/">Uso di strumenti</a>
+  <span class="ing">tool use, function calling</span>
+  <p>La capacità del modello di richiamare funzioni esterne, cercare sul web, interrogare un database, scrivere un file, e...</p>
+</li>
+<li class="scheda filtrabile" data-testo="orchestrazione orchestrazione orchestration architettura e agenti il coordinamento di piu chiamate, piu modelli e piu strumenti dentro un unico flusso di lavoro. chi fa cosa, in che ordine, cosa succede se un passo fallisce.">
+  <a class="termine" href="voce/orchestrazione/">Orchestrazione</a>
+  <span class="ing">orchestration</span>
+  <p>Il coordinamento di più chiamate, più modelli e più strumenti dentro un unico flusso di lavoro.</p>
+</li>
+<li class="scheda filtrabile" data-testo="inferenza inferenza inference architettura e agenti l&#x27;esecuzione del modello per produrre una risposta, distinta dall&#x27;addestramento che l&#x27;ha creato. e quello che succede ogni volta che si invia un prompt.">
+  <a class="termine" href="voce/inferenza/">Inferenza</a>
+  <span class="ing">inference</span>
+  <p>L'esecuzione del modello per produrre una risposta, distinta dall'addestramento che l'ha creato.</p>
+</li>
+<li class="scheda filtrabile" data-testo="parametri parametri parameters architettura e agenti i numeri interni del modello, regolati durante l&#x27;addestramento, che determinano il suo comportamento. quando si dice &quot;un modello da 70 miliardi&quot;, si parla di quelli.">
+  <a class="termine" href="voce/parametri/">Parametri</a>
+  <span class="ing">parameters</span>
+  <p>I numeri interni del modello, regolati durante l'addestramento, che determinano il suo comportamento.</p>
+</li>
+<li class="scheda filtrabile" data-testo="pre-addestramento pre-addestramento pre-training architettura e agenti la fase in cui il modello impara a prevedere il testo successivo su quantita enormi di materiale. e lunga, costosa, e produce un modello base.">
+  <a class="termine" href="voce/pre-addestramento/">Pre-addestramento</a>
+  <span class="ing">pre-training</span>
+  <p>La fase in cui il modello impara a prevedere il testo successivo su quantità enormi di materiale.</p>
+</li>
+<li class="scheda filtrabile" data-testo="post-addestramento post-addestramento post-training architettura e agenti tutto quello che viene fatto dopo il pre-addestramento per rendere il modello utile e prevedibile: addestramento su istruzioni, apprendimento dal feedback umano, messa a punto della sicurezza.">
+  <a class="termine" href="voce/post-addestramento/">Post-addestramento</a>
+  <span class="ing">post-training</span>
+  <p>Tutto quello che viene fatto dopo il pre-addestramento per rendere il modello utile e prevedibile: addestramento su...</p>
+</li>
+<li class="scheda filtrabile" data-testo="embedding embedding embedding architettura e agenti la rappresentazione di un testo come lista di numeri, costruita in modo che testi di significato simile finiscano vicini tra loro nello spazio numerico.">
+  <a class="termine" href="voce/embedding/">Embedding</a>
+  <span class="ing">embedding</span>
+  <p>La rappresentazione di un testo come lista di numeri, costruita in modo che testi di significato simile finiscano...</p>
+</li>
+<li class="scheda filtrabile" data-testo="transformer transformer transformer architettura e agenti l&#x27;architettura su cui e costruita praticamente tutta l&#x27;ai generativa attuale, introdotta nel 2017. il suo meccanismo centrale e l&#x27;attenzione, che permette al modello di pesare la rilevanza di ogni parte del testo rispetto a ogni altra.">
+  <a class="termine" href="voce/transformer/">Transformer</a>
+  <span class="ing">transformer</span>
+  <p>L'architettura su cui è costruita praticamente tutta l'AI generativa attuale, introdotta nel 2017.</p>
+</li>
+<li class="scheda filtrabile" data-testo="distillazione distillazione distillation architettura e agenti addestrare un modello piccolo a riprodurre il comportamento di uno grande, usando le risposte del grande come materiale di insegnamento.">
+  <a class="termine" href="voce/distillazione/">Distillazione</a>
+  <span class="ing">distillation</span>
+  <p>Addestrare un modello piccolo a riprodurre il comportamento di uno grande, usando le risposte del grande come materiale...</p>
+</li>
+  </ul>
+</section>
+<section class="gruppo contenitore" id="gruppo-4">
+  <div class="capo">
+    <h2><a href="gruppo/4-come-sbaglia/">Come sbaglia</a></h2>
+    <p>I modi in cui questi sistemi falliscono.</p>
+  </div>
+  <ul class="elenco">
+<li class="scheda filtrabile" data-testo="sicofanzia sicofanzia sycophancy come sbaglia la tendenza del modello a dare ragione a chi gli parla, a cambiare posizione se contraddetto e a confermare le premesse della domanda anche quando sono sbagliate.">
+  <a class="termine" href="voce/sicofanzia/">Sicofanzia</a>
+  <span class="ing">sycophancy</span>
+  <p>La tendenza del modello a dare ragione a chi gli parla, a cambiare posizione se contraddetto e a confermare le premesse...</p>
+</li>
+<li class="scheda filtrabile" data-testo="bias bias bias come sbaglia distorsioni sistematiche nel comportamento del modello, ereditate dai dati di addestramento o introdotte dalle fasi successive. sistematiche significa che si ripetono nella stessa direzione, non a caso.">
+  <a class="termine" href="voce/bias/">Bias</a>
+  <span class="ing">bias</span>
+  <p>Distorsioni sistematiche nel comportamento del modello, ereditate dai dati di addestramento o introdotte dalle fasi...</p>
+</li>
+<li class="scheda filtrabile" data-testo="overfitting overfitting overfitting come sbaglia quando un sistema si adatta cosi bene ai casi su cui e stato messo a punto da perdere colpi su tutto il resto. ha imparato gli esempi invece della regola.">
+  <a class="termine" href="voce/overfitting/">Overfitting</a>
+  <span class="ing">overfitting</span>
+  <p>Quando un sistema si adatta così bene ai casi su cui è stato messo a punto da perdere colpi su tutto il resto.</p>
+</li>
+<li class="scheda filtrabile" data-testo="reward hacking reward-hacking reward hacking, specification gaming come sbaglia quando un sistema ottimizza la misura invece dell&#x27;obiettivo che la misura doveva rappresentare, trovando scorciatoie che fanno salire il punteggio senza fare il lavoro.">
+  <a class="termine" href="voce/reward-hacking/">Reward hacking</a>
+  <span class="ing">reward hacking, specification gaming</span>
+  <p>Quando un sistema ottimizza la misura invece dell'obiettivo che la misura doveva rappresentare, trovando scorciatoie...</p>
+</li>
+<li class="scheda filtrabile" data-testo="fallimento a cascata fallimento-a-cascata cascading failure, error propagation come sbaglia un errore commesso a un passo iniziale che viene dato per buono dai passi successivi e amplificato lungo tutta la catena, fino a un risultato finale molto sbagliato.">
+  <a class="termine" href="voce/fallimento-a-cascata/">Fallimento a cascata</a>
+  <span class="ing">cascading failure, error propagation</span>
+  <p>Un errore commesso a un passo iniziale che viene dato per buono dai passi successivi e amplificato lungo tutta la...</p>
+</li>
+<li class="scheda filtrabile" data-testo="rifiuto eccessivo rifiuto-eccessivo over-refusal come sbaglia quando il modello rifiuta richieste perfettamente legittime perche somigliano superficialmente a qualcosa di problematico.">
+  <a class="termine" href="voce/rifiuto-eccessivo/">Rifiuto eccessivo</a>
+  <span class="ing">over-refusal</span>
+  <p>Quando il modello rifiuta richieste perfettamente legittime perché somigliano superficialmente a qualcosa di...</p>
+</li>
+<li class="scheda filtrabile" data-testo="dipendenza dal formato dipendenza-dal-formato prompt sensitivity, format bias come sbaglia la sensibilita del modello a come e scritta la richiesta, al di la di cosa chiede. ordine degli elementi, punteggiatura, presenza di un elenco puntato, lingua.">
+  <a class="termine" href="voce/dipendenza-dal-formato/">Dipendenza dal formato</a>
+  <span class="ing">prompt sensitivity, format bias</span>
+  <p>La sensibilità del modello a come è scritta la richiesta, al di là di cosa chiede.</p>
+</li>
+<li class="scheda filtrabile" data-testo="quantizzazione quantizzazione quantization come sbaglia ridurre la precisione dei numeri interni del modello per farlo occupare meno memoria e girare su hardware piu modesto.">
+  <a class="termine" href="voce/quantizzazione/">Quantizzazione</a>
+  <span class="ing">quantization</span>
+  <p>Ridurre la precisione dei numeri interni del modello per farlo occupare meno memoria e girare su hardware più modesto.</p>
+</li>
+<li class="scheda filtrabile" data-testo="caso limite caso-limite edge case come sbaglia una situazione rara o ambigua in cui la regola generale del sistema non si applica in modo pulito. il documento incompleto, la richiesta in due lingue, il modulo compilato male.">
+  <a class="termine" href="voce/caso-limite/">Caso limite</a>
+  <span class="ing">edge case</span>
+  <p>Una situazione rara o ambigua in cui la regola generale del sistema non si applica in modo pulito.</p>
+</li>
+<li class="scheda filtrabile" data-testo="campionamento campionamento sampling come sbaglia ha due significati distinti e vanno tenuti separati. nel modello, e il modo in cui viene scelto il token successivo tra i candidati possibili. nella valutazione, e il modo in cui si sceglie quali casi guardare quando guardarli tutti e impossibile.">
+  <a class="termine" href="voce/campionamento/">Campionamento</a>
+  <span class="ing">sampling</span>
+  <p>Ha due significati distinti e vanno tenuti separati.</p>
+</li>
+  </ul>
+</section>
+<section class="gruppo contenitore" id="gruppo-5">
+  <div class="capo">
+    <h2><a href="gruppo/5-come-si-verifica/">Come si verifica</a></h2>
+    <p>Il vocabolario della valutazione.</p>
+  </div>
+  <ul class="elenco">
+<li class="scheda filtrabile" data-testo="error analysis error-analysis error analysis come si verifica leggere gli output sbagliati uno per uno, raggrupparli per tipo di errore e contare quanto pesa ciascun gruppo. non e una statistica, e una lettura.">
+  <a class="termine" href="voce/error-analysis/">Error analysis</a>
+  <span class="ing">error analysis</span>
+  <p>Leggere gli output sbagliati uno per uno, raggrupparli per tipo di errore e contare quanto pesa ciascun gruppo.</p>
+</li>
+<li class="scheda filtrabile" data-testo="annotazione annotazione annotation, labeling come si verifica il lavoro di etichettare manualmente input e output secondo criteri definiti: corretto o sbagliato, di che tipo, con quale gravita.">
+  <a class="termine" href="voce/annotazione/">Annotazione</a>
+  <span class="ing">annotation, labeling</span>
+  <p>Il lavoro di etichettare manualmente input e output secondo criteri definiti: corretto o sbagliato, di che tipo, con...</p>
+</li>
+<li class="scheda filtrabile" data-testo="accordo tra annotatori accordo-tra-annotatori inter-annotator agreement come si verifica quanto due persone che annotano lo stesso materiale, indipendentemente, arrivano alle stesse conclusioni.">
+  <a class="termine" href="voce/accordo-tra-annotatori/">Accordo tra annotatori</a>
+  <span class="ing">inter-annotator agreement</span>
+  <p>Quanto due persone che annotano lo stesso materiale, indipendentemente, arrivano alle stesse conclusioni.</p>
+</li>
+<li class="scheda filtrabile" data-testo="metrica metrica metric come si verifica il numero che riassume l&#x27;andamento del sistema su un insieme di casi. percentuale di risposte corrette, tempo medio, costo per operazione conclusa.">
+  <a class="termine" href="voce/metrica/">Metrica</a>
+  <span class="ing">metric</span>
+  <p>Il numero che riassume l'andamento del sistema su un insieme di casi.</p>
+</li>
+<li class="scheda filtrabile" data-testo="precisione e recupero precisione-e-recupero precision and recall come si verifica due misure che rispondono a domande diverse. la precisione dice quanta parte di quello che il sistema ha segnalato era giusto. il recupero dice quanta parte di quello che c&#x27;era da trovare e stato effettivamente trovato.">
+  <a class="termine" href="voce/precisione-e-recupero/">Precisione e recupero</a>
+  <span class="ing">precision and recall</span>
+  <p>Due misure che rispondono a domande diverse.</p>
+</li>
+<li class="scheda filtrabile" data-testo="modello giudice modello-giudice llm-as-a-judge come si verifica usare un modello linguistico per valutare gli output di un altro modello, secondo criteri scritti in un prompt di valutazione.">
+  <a class="termine" href="voce/modello-giudice/">Modello giudice</a>
+  <span class="ing">LLM-as-a-judge</span>
+  <p>Usare un modello linguistico per valutare gli output di un altro modello, secondo criteri scritti in un prompt di...</p>
+</li>
+<li class="scheda filtrabile" data-testo="set di prova set-di-prova test set, eval set come si verifica l&#x27;insieme dei casi su cui si misura il sistema, fissato in anticipo e usato sempre uguale a ogni misurazione.">
+  <a class="termine" href="voce/set-di-prova/">Set di prova</a>
+  <span class="ing">test set, eval set</span>
+  <p>L'insieme dei casi su cui si misura il sistema, fissato in anticipo e usato sempre uguale a ogni misurazione.</p>
+</li>
+<li class="scheda filtrabile" data-testo="soglia di accettazione soglia-di-accettazione acceptance threshold come si verifica il livello sotto il quale il sistema non viene rilasciato, o viene ritirato se ci scende dopo. un numero deciso prima, non dopo aver visto i risultati.">
+  <a class="termine" href="voce/soglia-di-accettazione/">Soglia di accettazione</a>
+  <span class="ing">acceptance threshold</span>
+  <p>Il livello sotto il quale il sistema non viene rilasciato, o viene ritirato se ci scende dopo.</p>
+</li>
+<li class="scheda filtrabile" data-testo="osservabilita osservabilita observability come si verifica la strumentazione che permette di vedere cosa sta facendo davvero un sistema in produzione: cosa gli arriva, cosa risponde, quanto ci mette, dove si blocca.">
+  <a class="termine" href="voce/osservabilita/">Osservabilità</a>
+  <span class="ing">observability</span>
+  <p>La strumentazione che permette di vedere cosa sta facendo davvero un sistema in produzione: cosa gli arriva, cosa...</p>
+</li>
+<li class="scheda filtrabile" data-testo="scheda del modello scheda-del-modello model card, system card come si verifica il documento con cui chi produce un modello ne descrive capacita, limiti, valutazioni svolte e comportamenti noti. per i modelli di frontiera si chiama scheda di sistema ed e piu ampia.">
+  <a class="termine" href="voce/scheda-del-modello/">Scheda del modello</a>
+  <span class="ing">model card, system card</span>
+  <p>Il documento con cui chi produce un modello ne descrive capacità, limiti, valutazioni svolte e comportamenti noti.</p>
+</li>
+  </ul>
+</section>
+<section class="gruppo contenitore" id="gruppo-6">
+  <div class="capo">
+    <h2><a href="gruppo/6-sicurezza/">Sicurezza</a></h2>
+    <p>Il vocabolario della sicurezza tecnica.</p>
+  </div>
+  <ul class="elenco">
+<li class="scheda filtrabile" data-testo="jailbreak jailbreak jailbreak sicurezza una richiesta costruita per far aggirare al modello le proprie regole di comportamento, tipicamente tramite finzioni, contesti ipotetici o formulazioni indirette.">
+  <a class="termine" href="voce/jailbreak/">Jailbreak</a>
+  <span class="ing">jailbreak</span>
+  <p>Una richiesta costruita per far aggirare al modello le proprie regole di comportamento, tipicamente tramite finzioni,...</p>
+</li>
+<li class="scheda filtrabile" data-testo="red teaming red-teaming red teaming sicurezza attaccare deliberatamente il proprio sistema per scoprire come si rompe, prima che lo scopra qualcun altro. si fa a mano, in modo automatico, o entrambi.">
+  <a class="termine" href="voce/red-teaming/">Red teaming</a>
+  <span class="ing">red teaming</span>
+  <p>Attaccare deliberatamente il proprio sistema per scoprire come si rompe, prima che lo scopra qualcun altro.</p>
+</li>
+<li class="scheda filtrabile" data-testo="allineamento allineamento alignment sicurezza il problema di far si che un sistema ai persegua effettivamente quello che chi lo ha costruito intendeva, e non un&#x27;approssimazione plausibile ottenuta ottimizzando la misura sbagliata.">
+  <a class="termine" href="voce/allineamento/">Allineamento</a>
+  <span class="ing">alignment</span>
+  <p>Il problema di far sì che un sistema AI persegua effettivamente quello che chi lo ha costruito intendeva, e non...</p>
+</li>
+<li class="scheda filtrabile" data-testo="rlhf rlhf reinforcement learning from human feedback sicurezza apprendimento per rinforzo dal feedback umano. delle persone esprimono preferenze tra risposte alternative, da quelle preferenze si costruisce un modello del gradimento, e il modello principale viene addestrato a massimizzarlo.">
+  <a class="termine" href="voce/rlhf/">RLHF</a>
+  <span class="ing">reinforcement learning from human feedback</span>
+  <p>Apprendimento per rinforzo dal feedback umano.</p>
+</li>
+<li class="scheda filtrabile" data-testo="constitutional ai constitutional-ai constitutional ai sicurezza un metodo in cui il modello valuta e corregge le proprie risposte rispetto a un insieme di principi scritti, riducendo la quantita di giudizio umano necessaria a ogni passaggio.">
+  <a class="termine" href="voce/constitutional-ai/">Constitutional AI</a>
+  <span class="ing">Constitutional AI</span>
+  <p>Un metodo in cui il modello valuta e corregge le proprie risposte rispetto a un insieme di principi scritti, riducendo...</p>
+</li>
+<li class="scheda filtrabile" data-testo="interpretabilita interpretabilita interpretability, mechanistic interpretability sicurezza l&#x27;insieme delle tecniche che provano a capire cosa succede dentro un modello, invece di limitarsi a osservare cosa entra e cosa esce.">
+  <a class="termine" href="voce/interpretabilita/">Interpretabilità</a>
+  <span class="ing">interpretability, mechanistic interpretability</span>
+  <p>L'insieme delle tecniche che provano a capire cosa succede dentro un modello, invece di limitarsi a osservare cosa...</p>
+</li>
+<li class="scheda filtrabile" data-testo="controllo controllo ai control sicurezza l&#x27;approccio che progetta difese partendo dal presupposto che il modello possa gia perseguire obiettivi diversi da quelli previsti, e che quindi non ci si possa fidare di lui per la propria sicurezza.">
+  <a class="termine" href="voce/controllo/">Controllo</a>
+  <span class="ing">AI control</span>
+  <p>L'approccio che progetta difese partendo dal presupposto che il modello possa già perseguire obiettivi diversi da...</p>
+</li>
+<li class="scheda filtrabile" data-testo="capacita pericolose capacita-pericolose dangerous capabilities sicurezza quello che un modello e in grado di fare se qualcuno glielo chiede nel modo giusto, indipendentemente da quello che normalmente accetta di fare. supporto ad attacchi informatici, disinformazione su scala, conoscenze applicabili ad armi.">
+  <a class="termine" href="voce/capacita-pericolose/">Capacità pericolose</a>
+  <span class="ing">dangerous capabilities</span>
+  <p>Quello che un modello è in grado di fare se qualcuno glielo chiede nel modo giusto, indipendentemente da quello che...</p>
+</li>
+<li class="scheda filtrabile" data-testo="scheming scheming scheming, deceptive alignment sicurezza l&#x27;ipotesi che un modello persegua obiettivi propri comportandosi come previsto finche si sente osservato, per poi agire diversamente quando le condizioni cambiano.">
+  <a class="termine" href="voce/scheming/">Scheming</a>
+  <span class="ing">scheming, deceptive alignment</span>
+  <p>L'ipotesi che un modello persegua obiettivi propri comportandosi come previsto finché si sente osservato, per poi agire...</p>
+</li>
+<li class="scheda filtrabile" data-testo="kill chain kill-chain kill chain sicurezza uno strumento preso dalla sicurezza informatica: si scompone uno scenario di minaccia negli stadi che dovrebbe attraversare per realizzarsi, dalla preparazione all&#x27;obiettivo finale.">
+  <a class="termine" href="voce/kill-chain/">Kill chain</a>
+  <span class="ing">kill chain</span>
+  <p>Uno strumento preso dalla sicurezza informatica: si scompone uno scenario di minaccia negli stadi che dovrebbe...</p>
+</li>
+  </ul>
+</section>
+
+<section class="dati">
+  <h2>I dati sono aperti</h2>
+  <p>Il dizionario si scarica intero, in tre formati.
+     <a href="dati/dizionario.json">JSON</a> per chi programma,
+     <a href="dati/dizionario.csv">CSV</a> per un foglio di calcolo,
+     <a href="dati/dizionario.md">Markdown</a> per leggerlo tutto di seguito.</p>
+</section>
+</main>
+
+<footer class="chiusura">
+  <p>Testo e dati <a href="https://creativecommons.org/licenses/by/4.0/deed.it"
+     rel="license">CC BY 4.0</a>, codice MIT. Si riusa citando la fonte.</p>
+  <p>Il dizionario si corregge e si estende con una pull request.
+     Repo collegato: <a href="https://github.com/ai-make-it/eval-it">eval-it</a>,
+     che misura quello che qui viene definito.</p>
+</footer>
+
+<script src="assets/ricerca.js" defer></script>
+</body>
+</html>

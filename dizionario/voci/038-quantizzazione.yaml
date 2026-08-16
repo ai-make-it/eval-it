@@ -1,0 +1,23 @@
+id: "038"
+slug: quantizzazione
+termine: "Quantizzazione"
+settimana: 4
+gruppo: "Come sbaglia"
+inglese:
+  - "quantization"
+cos_e: >-
+  Ridurre la precisione dei numeri interni del modello per farlo occupare
+  meno memoria e girare su hardware più modesto.
+perche_conta: >-
+  È quello che permette di eseguire modelli seri su una macchina normale,
+  ed è il motivo per cui esistono versioni locali di modelli che
+  altrimenti richiederebbero un data center.
+errore_comune: >-
+  Considerarla gratuita perché sui benchmark generali si perde poco. La
+  perdita si concentra sui casi difficili e sui compiti a più passi, che
+  sono esattamente quelli su cui il sistema viene giudicato in produzione.
+vedi_anche:
+  - parametri
+  - inferenza
+  - distillazione
+revisione: 1

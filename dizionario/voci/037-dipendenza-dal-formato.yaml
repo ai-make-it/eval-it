@@ -1,0 +1,25 @@
+id: "037"
+slug: dipendenza-dal-formato
+termine: "Dipendenza dal formato"
+settimana: 4
+gruppo: "Come sbaglia"
+inglese:
+  - "prompt sensitivity"
+  - "format bias"
+cos_e: >-
+  La sensibilità del modello a come è scritta la richiesta, al di là di
+  cosa chiede. Ordine degli elementi, punteggiatura, presenza di un elenco
+  puntato, lingua.
+perche_conta: >-
+  Spiega perché due prompt che a una persona sembrano equivalenti danno
+  risultati di qualità diversa, e perché confrontare due sistemi che usano
+  formulazioni diverse non è un confronto pulito.
+errore_comune: >-
+  Attribuire a un modello un miglioramento che dipende dal formato. Prima
+  di dire che un modello è migliore, la stessa richiesta va posta nello
+  stesso modo.
+vedi_anche:
+  - prompt
+  - set-di-prova
+  - campionamento
+revisione: 1

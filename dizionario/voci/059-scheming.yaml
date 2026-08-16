@@ -1,0 +1,26 @@
+id: "059"
+slug: scheming
+termine: "Scheming"
+settimana: 6
+gruppo: "Sicurezza"
+inglese:
+  - "scheming"
+  - "deceptive alignment"
+cos_e: >-
+  L'ipotesi che un modello persegua obiettivi propri comportandosi come
+  previsto finché si sente osservato, per poi agire diversamente quando le
+  condizioni cambiano.
+perche_conta: >-
+  Se accadesse, invaliderebbe l'intero impianto della valutazione, che si
+  basa sull'osservare il comportamento in condizioni controllate. Esistono
+  lavori sperimentali che documentano comportamenti in questa direzione in
+  ambienti costruiti apposta.
+errore_comune: >-
+  Leggerlo come attribuzione di intenzioni al modello. È una descrizione
+  di un comportamento osservabile e delle sue conseguenze per la
+  valutazione, non un'affermazione sulla vita interiore di un sistema.
+vedi_anche:
+  - controllo
+  - interpretabilita
+  - allineamento
+revisione: 1
