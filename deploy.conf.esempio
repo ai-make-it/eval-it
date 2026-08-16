@@ -1,10 +1,11 @@
-# Copia questo file in deploy.conf e riempilo. deploy.conf non entra in git.
+# Copia questo file in deploy.conf e riempi SG_UTENTE. deploy.conf non entra
+# in git: questo repo e' pubblico, e l'utente SSH dell'hosting non ci va.
 #
-# L'utente e la porta si leggono in SiteGround: Site Tools > Devs > SSH Keys
-# Manager. La chiave si crea li' e si scarica, poi chmod 600.
+# L'utente si legge in SiteGround, Site Tools > Devs > SSH Keys Manager, dove
+# si importa anche la chiave pubblica.
 
-SG_UTENTE=u1234-56789
-SG_HOST=es43.siteground.eu
+SG_UTENTE=
+SG_HOST=ssh.ai-make.it
 SG_PORTA=18765
-SG_CHIAVE=$HOME/.ssh/siteground
+SG_CHIAVE=$HOME/.ssh/siteground-ai-make-it
 SG_REMOTO=www/ai-make.it/public_html/dizionario

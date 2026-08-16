@@ -148,9 +148,9 @@ Il criterio con cui si accetta una voce nuova è uno solo: **si riesce a scriver
 
 ---
 
-## Repo collegato
+## Il progetto collegato, nella cartella accanto
 
-**[eval-it](https://github.com/ai-make-it/eval-it)** misura quello che qui viene definito: un modello rifiuta in italiano una richiesta che accetta in inglese, e di quanto? Prompt appaiati, annotazione cieca, intervalli di confidenza.
+**[eval-it](../)** misura quello che qui viene definito: un modello rifiuta in italiano una richiesta che accetta in inglese, e di quanto? Prompt appaiati, annotazione cieca, intervalli di confidenza.
 
 Le voci *rifiuto eccessivo*, *accordo tra annotatori*, *set di prova* e *soglia di accettazione* descrivono esattamente gli oggetti che quel repo maneggia.
 
