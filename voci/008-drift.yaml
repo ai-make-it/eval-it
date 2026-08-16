@@ -1,0 +1,25 @@
+id: "008"
+slug: drift
+termine: "Drift"
+settimana: 1
+gruppo: "Le fondamenta"
+inglese:
+  - "drift"
+  - "model drift"
+  - "data drift"
+cos_e: >-
+  Il peggioramento graduale di un sistema che nessuno ha toccato, perché è
+  cambiato il mondo intorno. Cambiano i dati in ingresso, cambiano le
+  abitudini di chi lo usa, cambia il modello sotto quando il fornitore lo
+  aggiorna.
+perche_conta: >-
+  È il fallimento che non fa rumore. Il sistema non si rompe, si sposta
+  piano, e chi lo usa se ne accorge molto tempo dopo.
+errore_comune: >-
+  Misurare una volta sola, al collaudo. Una valutazione senza una cadenza
+  è la fotografia di un giorno.
+vedi_anche:
+  - regressione
+  - osservabilita
+  - valutazione
+revisione: 1

@@ -1,0 +1,24 @@
+id: "045"
+slug: precisione-e-recupero
+termine: "Precisione e recupero"
+settimana: 5
+gruppo: "Come si verifica"
+inglese:
+  - "precision and recall"
+cos_e: >-
+  Due misure che rispondono a domande diverse. La precisione dice quanta
+  parte di quello che il sistema ha segnalato era giusto. Il recupero dice
+  quanta parte di quello che c'era da trovare è stato effettivamente
+  trovato.
+perche_conta: >-
+  Vanno quasi sempre in direzioni opposte, e scegliere quale privilegiare
+  è una decisione di business, non tecnica. Un sistema antifrode e un
+  sistema di suggerimenti hanno bisogno di equilibri opposti.
+errore_comune: >-
+  Citare solo l'accuratezza complessiva. Su fenomeni rari è un numero che
+  sembra ottimo e non dice nulla: un sistema che non segnala mai niente è
+  accurato al 99% se il fenomeno riguarda l'1% dei casi.
+vedi_anche:
+  - metrica
+  - soglia-di-accettazione
+revisione: 1

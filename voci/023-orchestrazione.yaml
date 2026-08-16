@@ -1,0 +1,24 @@
+id: "023"
+slug: orchestrazione
+termine: "Orchestrazione"
+settimana: 3
+gruppo: "Architettura e agenti"
+inglese:
+  - "orchestration"
+cos_e: >-
+  Il coordinamento di più chiamate, più modelli e più strumenti dentro un
+  unico flusso di lavoro. Chi fa cosa, in che ordine, cosa succede se un
+  passo fallisce.
+perche_conta: >-
+  Nei sistemi reali la maggior parte della qualità e della maggior parte
+  dei problemi sta qui, non nel modello. Due sistemi che usano lo stesso
+  modello possono comportarsi in modo completamente diverso.
+errore_comune: >-
+  Aumentare i passaggi per migliorare la qualità. Ogni passo aggiunge una
+  probabilità di errore che si moltiplica: dieci passi al 95% di
+  affidabilità danno un sistema al 60%.
+vedi_anche:
+  - agente
+  - fallimento-a-cascata
+  - osservabilita
+revisione: 1

@@ -1,0 +1,24 @@
+id: "029"
+slug: transformer
+termine: "Transformer"
+settimana: 3
+gruppo: "Architettura e agenti"
+inglese:
+  - "transformer"
+cos_e: >-
+  L'architettura su cui è costruita praticamente tutta l'AI generativa
+  attuale, introdotta nel 2017. Il suo meccanismo centrale è l'attenzione,
+  che permette al modello di pesare la rilevanza di ogni parte del testo
+  rispetto a ogni altra.
+perche_conta: >-
+  Spiega molte proprietà pratiche dei modelli, dal costo che cresce
+  rapidamente con la lunghezza del contesto al fatto che elaborano il
+  testo in parallelo invece che parola per parola.
+errore_comune: >-
+  Trattarlo come sinonimo di modello linguistico. È l'architettura, non il
+  modello: esistono transformer per immagini, audio e proteine.
+vedi_anche:
+  - parametri
+  - inferenza
+  - embedding
+revisione: 1

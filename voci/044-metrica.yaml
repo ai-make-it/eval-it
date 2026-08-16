@@ -1,0 +1,23 @@
+id: "044"
+slug: metrica
+termine: "Metrica"
+settimana: 5
+gruppo: "Come si verifica"
+inglese:
+  - "metric"
+cos_e: >-
+  Il numero che riassume l'andamento del sistema su un insieme di casi.
+  Percentuale di risposte corrette, tempo medio, costo per operazione
+  conclusa.
+perche_conta: >-
+  Rende confrontabili due versioni di un sistema. È anche l'unica cosa che
+  si può inserire in un processo di rilascio automatico.
+errore_comune: >-
+  Usarne una sola. Una metrica singola si può sempre far salire
+  peggiorando qualcosa che non viene misurato, e prima o poi qualcuno lo
+  farà senza rendersene conto.
+vedi_anche:
+  - precisione-e-recupero
+  - soglia-di-accettazione
+  - valutazione
+revisione: 1

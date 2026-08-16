@@ -1,0 +1,23 @@
+id: "026"
+slug: pre-addestramento
+termine: "Pre-addestramento"
+settimana: 3
+gruppo: "Architettura e agenti"
+inglese:
+  - "pre-training"
+cos_e: >-
+  La fase in cui il modello impara a prevedere il testo successivo su
+  quantità enormi di materiale. È lunga, costosa, e produce un modello
+  base.
+perche_conta: >-
+  È qui che il modello acquisisce quasi tutto quello che sa. Tutto ciò che
+  viene dopo ne modella il comportamento, non la conoscenza.
+errore_comune: >-
+  Immaginare che i dati vengano scelti uno per uno. La selezione avviene
+  per filtri automatici su scala industriale, e cosa esattamente ci sia
+  dentro è raramente pubblico.
+vedi_anche:
+  - post-addestramento
+  - parametri
+  - modello-base-e-modello-istruito
+revisione: 1

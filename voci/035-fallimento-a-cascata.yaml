@@ -1,0 +1,25 @@
+id: "035"
+slug: fallimento-a-cascata
+termine: "Fallimento a cascata"
+settimana: 4
+gruppo: "Come sbaglia"
+inglese:
+  - "cascading failure"
+  - "error propagation"
+cos_e: >-
+  Un errore commesso a un passo iniziale che viene dato per buono dai
+  passi successivi e amplificato lungo tutta la catena, fino a un
+  risultato finale molto sbagliato.
+perche_conta: >-
+  È la modalità di fallimento tipica dei sistemi agentici. L'output finale
+  può essere assurdo senza che nessun singolo passaggio sembri, preso da
+  solo, particolarmente sbagliato.
+errore_comune: >-
+  Valutare solo il risultato finale. Nei sistemi a più passi serve
+  guardare la traccia intera, perché è lì che si vede dove la cosa ha
+  deragliato.
+vedi_anche:
+  - agente
+  - orchestrazione
+  - osservabilita
+revisione: 1

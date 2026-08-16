@@ -1,0 +1,24 @@
+id: "009"
+slug: regressione
+termine: "Regressione"
+settimana: 1
+gruppo: "Le fondamenta"
+inglese:
+  - "regression"
+cos_e: >-
+  Quando una modifica migliora una cosa e ne peggiora un'altra senza che
+  nessuno se ne accorga. Un prompt riscritto, un aggiornamento del
+  modello, un parametro spostato.
+perche_conta: >-
+  Nei sistemi AI succede più spesso e si vede molto meno che nel software
+  tradizionale, perché non compare un errore. Compare un output
+  leggermente peggiore, e leggermente peggiore non fa scattare niente.
+errore_comune: >-
+  Verificare la modifica solo sui casi che si volevano sistemare. Quelli
+  funzioneranno, sono appena stati sistemati. Il problema è tutto il
+  resto.
+vedi_anche:
+  - drift
+  - set-di-prova
+  - soglia-di-accettazione
+revisione: 1

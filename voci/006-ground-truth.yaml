@@ -1,0 +1,24 @@
+id: "006"
+slug: ground-truth
+termine: "Ground truth"
+settimana: 1
+gruppo: "Le fondamenta"
+inglese:
+  - "ground truth"
+cos_e: >-
+  La risposta corretta contro cui si confronta l'output del sistema. In
+  italiano si dice a volte "verità di riferimento", ma quasi nessuno lo
+  dice.
+perche_conta: >-
+  Senza, non si sta valutando: si stanno raccogliendo impressioni.
+  Stabilirla è di solito la parte più costosa del lavoro, ed è quella che
+  viene saltata per prima.
+errore_comune: >-
+  Darla per ovvia. Su molti compiti reali due esperti competenti non sono
+  d'accordo tra loro, e chi non se ne accorge prima lo scopre leggendo
+  risultati che non stanno in piedi.
+vedi_anche:
+  - annotazione
+  - accordo-tra-annotatori
+  - set-di-prova
+revisione: 1

@@ -1,0 +1,49 @@
+Questo repository ha due licenze.
+
+================================================================
+TESTO E DATI (voci/, dist/, docs/)
+Creative Commons Attribuzione 4.0 Internazionale (CC BY 4.0)
+================================================================
+
+Copyright (c) 2026 Electric Flock Ltd
+
+Sei libero di:
+  - condividere: copiare e ridistribuire il materiale con qualsiasi mezzo
+    e in qualsiasi formato;
+  - modificare: remixare, trasformare il materiale e basarti su di esso
+    per qualsiasi fine, anche commerciale.
+
+Alle seguenti condizioni:
+  - Attribuzione: devi riconoscere una menzione di paternita' adeguata,
+    fornire un link alla licenza e indicare se sono state effettuate
+    modifiche.
+
+Testo integrale della licenza:
+https://creativecommons.org/licenses/by/4.0/legalcode.it
+
+Citazione suggerita:
+  Dizionario ragionato dell'AI in italiano, Electric Flock Ltd, CC BY 4.0.
+
+================================================================
+CODICE (src/)
+Licenza MIT
+================================================================
+
+Copyright (c) 2026 Electric Flock Ltd
+
+Con la presente si concede, gratuitamente, a chiunque ottenga una copia di
+questo software e dei file di documentazione associati (il "Software"), il
+permesso di utilizzare il Software senza restrizioni, inclusi senza
+limitazione i diritti di usare, copiare, modificare, unire, pubblicare,
+distribuire, concedere in sublicenza e/o vendere copie del Software, e di
+permettere alle persone a cui il Software e' fornito di farlo, alle
+seguenti condizioni:
+
+L'avviso di copyright di cui sopra e questo avviso di permesso devono
+essere inclusi in tutte le copie o parti sostanziali del Software.
+
+IL SOFTWARE VIENE FORNITO "COSI' COM'E'", SENZA GARANZIA DI ALCUN TIPO,
+ESPRESSA O IMPLICITA, INCLUSE MA NON LIMITATE A GARANZIE DI
+COMMERCIABILITA', IDONEITA' PER UNO SCOPO PARTICOLARE E NON VIOLAZIONE. IN
+NESSUN CASO GLI AUTORI O I TITOLARI DEL COPYRIGHT SARANNO RESPONSABILI PER
+QUALSIASI RECLAMO, DANNO O ALTRA RESPONSABILITA'.

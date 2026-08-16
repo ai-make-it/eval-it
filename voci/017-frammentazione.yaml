@@ -1,0 +1,23 @@
+id: "017"
+slug: frammentazione
+termine: "Frammentazione"
+settimana: 2
+gruppo: "Come si usa"
+inglese:
+  - "chunking"
+cos_e: >-
+  Spezzare i documenti in pezzi più piccoli prima di indicizzarli, perché
+  il recupero lavora sui frammenti e non sui file interi.
+perche_conta: >-
+  È la decisione più sottovalutata di un sistema RAG. Frammenti troppo
+  piccoli perdono il contesto necessario a capirli, troppo grandi portano
+  rumore nel contesto e diluiscono la risposta.
+errore_comune: >-
+  Tagliare a lunghezza fissa ignorando la struttura del documento. Una
+  tabella spezzata a metà o un articolo di legge separato dal suo comma
+  diventano inutili o fuorvianti.
+vedi_anche:
+  - rag
+  - ricerca-semantica
+  - embedding
+revisione: 1

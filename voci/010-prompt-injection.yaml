@@ -1,0 +1,23 @@
+id: "010"
+slug: prompt-injection
+termine: "Prompt injection"
+settimana: 1
+gruppo: "Le fondamenta"
+inglese:
+  - "prompt injection"
+cos_e: >-
+  Quando un'istruzione nascosta dentro il materiale che il sistema legge,
+  una pagina web, un documento, una mail, viene eseguita come se fosse un
+  comando dell'utente.
+perche_conta: >-
+  È il problema di sicurezza strutturale di qualunque sistema che legga
+  contenuto esterno o usi strumenti per conto di qualcuno, e a oggi non ha
+  una soluzione completa. Si mitiga, non si chiude.
+errore_comune: >-
+  Confonderla con il jailbreak. Nel jailbreak è l'utente che prova ad
+  aggirare le regole. Nella prompt injection l'utente è la vittima.
+vedi_anche:
+  - jailbreak
+  - prompt-di-sistema
+  - uso-di-strumenti
+revisione: 1

@@ -1,0 +1,24 @@
+id: "040"
+slug: campionamento
+termine: "Campionamento"
+settimana: 4
+gruppo: "Come sbaglia"
+inglese:
+  - "sampling"
+cos_e: >-
+  Ha due significati distinti e vanno tenuti separati. Nel modello, è il
+  modo in cui viene scelto il token successivo tra i candidati possibili.
+  Nella valutazione, è il modo in cui si sceglie quali casi guardare
+  quando guardarli tutti è impossibile.
+perche_conta: >-
+  Nel primo senso spiega la variabilità delle risposte. Nel secondo
+  determina se i risultati della valutazione descrivono il sistema o solo
+  la fetta che si è scelta.
+errore_comune: >-
+  Nel secondo senso, campionare a caso e basta. I casi difficili sono rari
+  per definizione: un campione casuale li contiene poco, e una valutazione
+  che li perde è ottimista per costruzione.
+vedi_anche:
+  - temperatura
+  - token
+revisione: 1

@@ -1,0 +1,24 @@
+id: "051"
+slug: jailbreak
+termine: "Jailbreak"
+settimana: 6
+gruppo: "Sicurezza"
+inglese:
+  - "jailbreak"
+cos_e: >-
+  Una richiesta costruita per far aggirare al modello le proprie regole di
+  comportamento, tipicamente tramite finzioni, contesti ipotetici o
+  formulazioni indirette.
+perche_conta: >-
+  Misura quanto le protezioni di un modello reggono sotto pressione, e
+  nessun modello pubblico ha finora retto indefinitamente.
+errore_comune: >-
+  Trattarlo come il principale rischio di sicurezza dei sistemi aziendali.
+  Nel jailbreak è l'utente che vuole aggirare le regole: nei sistemi che
+  leggono contenuto esterno il rischio più serio è la prompt injection,
+  dove l'utente subisce.
+vedi_anche:
+  - prompt-injection
+  - red-teaming
+  - rifiuto-eccessivo
+revisione: 1

@@ -1,0 +1,372 @@
+/*
+  Il foglio di stile del dizionario.
+
+  Nessun font esterno e nessuna libreria: il sito sta in una sottocartella
+  di un hosting condiviso e deve funzionare senza dipendere da una CDN.
+  Il colore del marchio sta in --accento, ed e' l'unica riga da cambiare
+  per allineare il dizionario al resto del sito.
+*/
+
+:root {
+  --carta: #fbfaf8;
+  --carta-alt: #f3f0ea;
+  --inchiostro: #16181d;
+  --tenue: #5b6270;
+  --filo: #e3ded4;
+  --accento: #a8432a;
+  --accento-tenue: #f4e6e1;
+
+  --testo: 1.0625rem;
+  --lettura: 34rem;
+  --largo: 64rem;
+  --serif: Charter, "Bitstream Charter", "Iowan Old Style", Georgia,
+           "Times New Roman", serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+          sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --carta: #131519;
+    --carta-alt: #1b1e24;
+    --inchiostro: #e9e6e1;
+    --tenue: #9aa2b0;
+    --filo: #2b2f37;
+    --accento: #e08e73;
+    --accento-tenue: #2a1d19;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--carta);
+  color: var(--inchiostro);
+  font-family: var(--serif);
+  font-size: var(--testo);
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+}
+
+a { color: inherit; text-decoration-color: var(--filo); text-underline-offset: 0.18em; }
+a:hover { text-decoration-color: var(--accento); }
+
+:focus-visible { outline: 2px solid var(--accento); outline-offset: 3px; }
+
+.salta {
+  position: absolute; left: -9999px;
+  background: var(--carta); padding: 0.6rem 1rem; z-index: 10;
+}
+.salta:focus { left: 1rem; top: 1rem; }
+
+.via { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+
+/* ---------------------------------------------------------- testata */
+
+.testata {
+  border-bottom: 1px solid var(--filo);
+  padding: 1.1rem 1.5rem 1rem;
+}
+
+.testata .riga {
+  max-width: var(--largo);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem 1.5rem;
+}
+
+.marchio {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+}
+.marchio::before {
+  content: "";
+  display: inline-block;
+  width: 0.6em; height: 0.6em;
+  margin-right: 0.5em;
+  background: var(--accento);
+  border-radius: 2px;
+}
+
+.testata nav {
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  display: flex;
+  gap: 1.25rem;
+  color: var(--tenue);
+}
+.testata nav a { text-decoration: none; }
+.testata nav a:hover { color: var(--accento); }
+
+.cerca {
+  max-width: var(--largo);
+  margin: 0.9rem auto 0;
+}
+
+.cerca input {
+  width: 100%;
+  font: inherit;
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  color: inherit;
+  background: var(--carta-alt);
+  border: 1px solid var(--filo);
+  border-radius: 7px;
+  padding: 0.55rem 0.8rem;
+}
+.cerca input::placeholder { color: var(--tenue); }
+
+/* ---------------------------------------------------------- impianto */
+
+main {
+  max-width: var(--largo);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+h1 {
+  font-size: clamp(1.85rem, 1.3rem + 2vw, 2.6rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.6rem;
+  font-weight: 600;
+}
+
+.apertura { max-width: var(--lettura); margin-bottom: 3rem; }
+.apertura p { margin: 0 0 0.9rem; }
+
+.occhiello { font-size: 1.1875rem; line-height: 1.5; }
+
+.conteggio, .etichetta, .peso {
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--tenue);
+}
+.conteggio { text-transform: none; letter-spacing: 0; font-size: 0.875rem; }
+.etichetta { margin: 0 0 0.5rem; }
+.etichetta a { color: var(--accento); text-decoration: none; }
+
+.briciole {
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  color: var(--tenue);
+  margin-bottom: 2rem;
+}
+.briciole a { text-decoration: none; }
+.briciole a:hover { color: var(--accento); }
+.briciole .sep { opacity: 0.5; }
+
+.esito {
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  color: var(--tenue);
+  border-left: 2px solid var(--accento);
+  padding-left: 0.75rem;
+  margin: 0 0 2rem;
+}
+
+/* ---------------------------------------------------------- elenchi */
+
+.gruppo { margin-bottom: 3.5rem; }
+
+.gruppo .capo {
+  border-top: 1px solid var(--filo);
+  padding-top: 1rem;
+  margin-bottom: 1.5rem;
+  max-width: var(--lettura);
+}
+.gruppo .capo h2 {
+  font-size: 1.375rem;
+  margin: 0 0 0.25rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.gruppo .capo h2 a { text-decoration: none; }
+.gruppo .capo h2 a:hover { color: var(--accento); }
+.gruppo .capo p { margin: 0; color: var(--tenue); font-size: 0.9375rem; }
+
+.elenco {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1px;
+  background: var(--filo);
+  border: 1px solid var(--filo);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.elenco.dritto { grid-template-columns: 1fr; }
+
+.scheda, .elenco > li {
+  background: var(--carta);
+  padding: 1rem 1.1rem 1.1rem;
+}
+.scheda p, .elenco > li p {
+  margin: 0.45rem 0 0;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--tenue);
+}
+
+.termine {
+  font-weight: 600;
+  font-size: 1.0625rem;
+  text-decoration: none;
+}
+.scheda:hover .termine { color: var(--accento); }
+
+.ing {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  color: var(--tenue);
+  margin-top: 0.15rem;
+}
+
+.elenco > li a { font-weight: 600; text-decoration: none; }
+.peso { margin-left: 0.5rem; }
+
+/* ---------------------------------------------------------- la voce */
+
+.voce { max-width: var(--lettura); }
+
+.voce header { margin-bottom: 2.25rem; }
+.voce .inglese {
+  font-family: var(--sans);
+  font-size: 0.9375rem;
+  color: var(--tenue);
+  margin: 0;
+}
+.voce .inglese b { color: var(--inchiostro); font-weight: 600; }
+
+.campo { margin-bottom: 2rem; }
+.campo h2 {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--tenue);
+  margin: 0 0 0.4rem;
+  font-weight: 600;
+}
+.campo p { margin: 0; font-size: 1.125rem; line-height: 1.55; }
+
+/* Il campo che tiene in piedi il dizionario, e si vede. */
+.campo.errore {
+  background: var(--accento-tenue);
+  border-left: 3px solid var(--accento);
+  border-radius: 0 6px 6px 0;
+  padding: 1rem 1.2rem;
+}
+.campo.errore h2 { color: var(--accento); }
+
+.vedi {
+  border-top: 1px solid var(--filo);
+  padding-top: 1.1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem 0.9rem;
+}
+.vedi h2 {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--tenue);
+  margin: 0;
+  font-weight: 600;
+}
+.vedi a { font-size: 0.9375rem; }
+
+.scorri {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  background: var(--filo);
+  border: 1px solid var(--filo);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 3.5rem;
+}
+.scorri a {
+  flex: 1 1 12rem;
+  background: var(--carta);
+  padding: 0.9rem 1.1rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+.scorri a:hover { color: var(--accento); }
+.scorri .segu { text-align: right; }
+.scorri span {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--tenue);
+  font-weight: 400;
+  margin-bottom: 0.15rem;
+}
+
+/* ---------------------------------------------------------- tavola */
+
+.tavola {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+.tavola th, .tavola td {
+  text-align: left;
+  padding: 0.55rem 0.9rem;
+  border-bottom: 1px solid var(--filo);
+}
+.tavola th {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--tenue);
+  font-weight: 600;
+}
+.tavola td:first-child { font-family: var(--sans); font-size: 0.875rem; }
+.tavola a { font-weight: 600; text-decoration: none; }
+.tavola tr:hover a { color: var(--accento); }
+
+/* ---------------------------------------------------------- coda */
+
+.dati, .nota { max-width: var(--lettura); margin-top: 3rem; }
+.dati h2 {
+  font-size: 1.125rem;
+  margin: 1.75rem 0 0.4rem;
+  font-weight: 600;
+}
+.dati h2:first-child { margin-top: 0; }
+.dati p, .nota { color: var(--tenue); }
+.nota { font-size: 0.9375rem; }
+
+.chiusura {
+  border-top: 1px solid var(--filo);
+  padding: 2rem 1.5rem 3rem;
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--tenue);
+}
+.chiusura p { max-width: var(--largo); margin: 0 auto 0.5rem; }
+
+@media (max-width: 34rem) {
+  main { padding: 1.75rem 1.1rem 3rem; }
+  .testata { padding: 0.9rem 1.1rem; }
+  .scorri .segu { text-align: left; }
+}

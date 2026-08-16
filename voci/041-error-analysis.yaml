@@ -1,0 +1,24 @@
+id: "041"
+slug: error-analysis
+termine: "Error analysis"
+settimana: 5
+gruppo: "Come si verifica"
+inglese:
+  - "error analysis"
+cos_e: >-
+  Leggere gli output sbagliati uno per uno, raggrupparli per tipo di
+  errore e contare quanto pesa ciascun gruppo. Non è una statistica, è una
+  lettura.
+perche_conta: >-
+  È l'unico modo per sapere cosa migliorare. Un punteggio dice che il
+  sistema sbaglia il 18% delle volte, l'error analysis dice che quel 18% è
+  quasi tutto un problema solo, che si risolve in un pomeriggio.
+errore_comune: >-
+  Saltarla e passare direttamente alle soluzioni. Chi ottimizza senza aver
+  guardato gli errori ottimizza per l'errore che immagina, e quello
+  immaginato quasi mai è il più frequente.
+vedi_anche:
+  - annotazione
+  - caso-limite
+  - metrica
+revisione: 1
