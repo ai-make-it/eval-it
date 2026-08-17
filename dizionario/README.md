@@ -97,7 +97,9 @@ DIZIONARIO_BASE=https://esempio.it/glossario python src/sito.py
 
 La prova a vuoto è il comportamento predefinito perché `rsync` gira con `--delete`, e su un hosting condiviso un percorso remoto sbagliato cancella un sito. Lo script si rifiuta di partire se la destinazione è la radice del dominio invece di una sottocartella dedicata.
 
-Le credenziali stanno in `deploy.conf`, che non entra in git: si parte da `deploy.conf.esempio`. Servono l'utente SSH e una chiave, che si creano in SiteGround da Site Tools, Devs, SSH Keys Manager.
+Le credenziali stanno in `deploy.conf`, che non entra in git: si parte da `deploy.conf.esempio`. Servono l'utente SSH e una chiave, che si importa in SiteGround da Site Tools, Devs, SSH Keys Manager.
+
+Chi non ha una macchina con `ssh` e `rsync` a portata usa il workflow **dizionario, pubblica**, da Actions: gira sullo stesso `deploy.sh` su un runner GitHub, e parte anche lui in prova a vuoto salvo che si scelga `carica`. Vuole due segreti, `SG_CHIAVE` (la chiave privata) e `SG_UTENTE`. Il trigger è solo manuale, di proposito: su un repo pubblico un trigger su pull request esporrebbe i segreti a una pull request da un fork.
 
 Due cose vanno fatte a mano, una volta sola, perché stanno fuori da questa cartella: dichiarare `https://ai-make.it/dizionario/sitemap.xml` nel `robots.txt` alla radice del dominio, e inviare la sitemap in Search Console. Un `robots.txt` dentro una sottocartella non lo legge nessuno, e per questo non lo generiamo.
 

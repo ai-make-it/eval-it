@@ -1,0 +1,105 @@
+name: dizionario, pubblica
+
+# La pubblicazione resta un'azione esplicita, come in deploy.sh: questo
+# workflow non parte da solo su push. Si lancia a mano da Actions, e parte
+# in prova a vuoto salvo che si scelga "carica".
+#
+# Serve perche' l'ambiente in cui gira l'assistente non ha egress SSH: il
+# deploy lo fa un runner GitHub, che ce l'ha.
+#
+# Segreti da impostare in Settings > Secrets and variables > Actions:
+#   SG_CHIAVE   la chiave privata, per intero, righe BEGIN e END comprese
+#   SG_UTENTE   l'utente SSH dell'hosting
+# Facoltativi, hanno un valore predefinito in deploy.sh:
+#   SG_HOST     ssh.ai-make.it
+#   SG_PORTA    18765
+#   SG_REMOTO   www/ai-make.it/public_html/dizionario
+#
+# Questo repo e' pubblico: il trigger e' solo workflow_dispatch, quindi una
+# pull request da un fork non arriva ai segreti. Non aggiungere qui un
+# trigger pull_request.
+
+on:
+  workflow_dispatch:
+    inputs:
+      modo:
+        description: "Cosa fare"
+        required: true
+        default: prova
+        type: choice
+        options:
+          - prova
+          - carica
+
+concurrency:
+  group: dizionario-deploy
+  cancel-in-progress: false
+
+jobs:
+  pubblica:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: dizionario
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install pyyaml
+
+      # Si pubblica quello che il sorgente produce adesso, non quello che
+      # e' committato: se i due divergono, il passo dopo lo dice e si
+      # ferma qui invece che caricare una versione vecchia.
+      - name: Rigenera e controlla
+        run: |
+          python src/validate.py
+          python src/build.py
+          python src/sito.py
+          python src/collegamenti.py
+
+      - name: sito/ deve coincidere con il committato
+        run: |
+          if ! git diff --quiet -- dist/ sito/; then
+            echo "::error::dist/ o sito/ non sono allineati a voci/. Rigenera e committa prima di pubblicare."
+            git diff --stat -- dist/ sito/
+            exit 1
+          fi
+
+      - name: Chiave e configurazione
+        env:
+          SG_CHIAVE: ${{ secrets.SG_CHIAVE }}
+          SG_UTENTE: ${{ secrets.SG_UTENTE }}
+          SG_HOST: ${{ secrets.SG_HOST }}
+          SG_PORTA: ${{ secrets.SG_PORTA }}
+          SG_REMOTO: ${{ secrets.SG_REMOTO }}
+        run: |
+          if [ -z "$SG_CHIAVE" ] || [ -z "$SG_UTENTE" ]; then
+            echo "::error::Mancano i segreti SG_CHIAVE o SG_UTENTE."
+            exit 1
+          fi
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          printf '%s\n' "$SG_CHIAVE" > ~/.ssh/siteground-ai-make-it
+          chmod 600 ~/.ssh/siteground-ai-make-it
+          {
+            echo "SG_UTENTE=$SG_UTENTE"
+            [ -n "$SG_HOST" ]   && echo "SG_HOST=$SG_HOST"
+            [ -n "$SG_PORTA" ]  && echo "SG_PORTA=$SG_PORTA"
+            [ -n "$SG_REMOTO" ] && echo "SG_REMOTO=$SG_REMOTO"
+            echo 'SG_CHIAVE=$HOME/.ssh/siteground-ai-make-it'
+          } > deploy.conf
+
+      - name: Prova a vuoto
+        run: ./deploy.sh
+
+      - name: Carica
+        if: inputs.modo == 'carica'
+        run: ./deploy.sh --conferma
+
+      - name: Cancella la chiave dal runner
+        if: always()
+        run: rm -f ~/.ssh/siteground-ai-make-it dizionario/deploy.conf
+        working-directory: .
