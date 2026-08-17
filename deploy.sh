@@ -18,7 +18,7 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 
-[ -f deploy.conf ] && . ./deploy.conf
+if [ -f deploy.conf ]; then . ./deploy.conf; fi
 
 SG_HOST="${SG_HOST:-ssh.ai-make.it}"
 SG_PORTA="${SG_PORTA:-18765}"
@@ -27,6 +27,13 @@ SG_CHIAVE="${SG_CHIAVE:-$HOME/.ssh/siteground-ai-make-it}"
 SG_REMOTO="${SG_REMOTO:-www/ai-make.it/public_html/dizionario}"
 
 rosso() { printf '\033[31m%s\033[0m\n' "$*" >&2; }
+
+for strumento in ssh rsync; do
+  if ! command -v "$strumento" >/dev/null; then
+    rosso "Manca $strumento, che serve per caricare."
+    exit 1
+  fi
+done
 
 if [ -z "$SG_UTENTE" ]; then
   rosso "Manca SG_UTENTE (l'utente SSH di SiteGround, tipo u1234-56789)."
