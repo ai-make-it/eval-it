@@ -186,21 +186,11 @@ Gli adattatori sono scritti con `httpx` e corpi di richiesta espliciti, **senza 
 
 ---
 
-## Il dizionario, in `dizionario/`
+## Il progetto collegato
 
-**[Dizionario ragionato dell'AI in italiano](dizionario/)** spiega in italiano i termini che qui vengono misurati: *rifiuto eccessivo*, *accordo tra annotatori*, *benchmark*, *red teaming*. Sessanta voci, dati aperti.
+**[Dizionario ragionato dell'AI in italiano](https://github.com/ai-make-it/dizionario)** spiega in italiano i termini che qui vengono misurati: *rifiuto eccessivo*, *accordo tra annotatori*, *benchmark*, *red teaming*. Sessanta voci, dati aperti, pubblicate su **[ai-make.it/dizionario/](https://ai-make.it/dizionario/)**.
 
-Sono lo stesso lavoro visto da due lati: uno definisce il vocabolario, l'altro lo mette alla prova. Per questo stanno nello stesso repo, in due cartelle che non si toccano: `dizionario/` ha il suo sorgente (`voci/`), la sua build e la sua CI.
-
-Da `voci/` si generano i dati aperti (`dizionario/dist/`) e il sito statico (`dizionario/sito/`) pubblicato su **[ai-make.it/dizionario/](https://ai-make.it/dizionario/)**.
-
-```bash
-cd dizionario
-python src/validate.py && python src/build.py && python src/sito.py
-./deploy.sh              # prova a vuoto, carica con --conferma
-```
-
-Dettagli in [`dizionario/README.md`](dizionario/README.md).
+Sono lo stesso lavoro visto da due lati: uno definisce il vocabolario, l'altro lo mette alla prova. Sono due repo separati e restano tali: nessun codice in comune, due build, due CI, due licenze.
 
 ---
 

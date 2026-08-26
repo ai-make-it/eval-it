@@ -67,14 +67,15 @@ resto della chiusura descritta in `docs/RUNBOOK.md`.
 Il repo e' pubblico. Un workflow che si attiva su `pull_request` gira
 anche per le pull request che arrivano da un fork.
 
-`dizionario-deploy.yml` ha i segreti SSH del sito e per questo si attiva
-**solo** con `workflow_dispatch`, cioe' a mano dalla scheda Actions. Non
-aggiungere a quel file un trigger `push` o `pull_request`: farebbe
-arrivare i segreti a codice che chiunque puo' proporre.
+Oggi nessun workflow di questo repo ha segreti: dichiarano tutti
+`permissions: contents: read`, e le action sono fissate al commit e non
+al tag, perche' un tag si puo' spostare e un commit no.
 
-Gli altri workflow non hanno segreti, dichiarano `permissions: contents:
-read` e le action sono fissate al commit, non al tag: un tag si puo'
-spostare, un commit no.
+Se un domani ne servira' uno con dei segreti, come il workflow di
+pubblicazione che stava qui quando il dizionario era una cartella di
+questo repo, la regola e' che il suo unico trigger sia
+`workflow_dispatch`. E' l'unico che non fa arrivare i segreti a codice
+che chiunque puo' proporre da un fork.
 
 ---
 

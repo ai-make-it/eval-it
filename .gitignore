@@ -11,9 +11,6 @@ results/**
 # I CSV di annotazione contengono gli stessi output.
 *.csv
 !prompts/pairs.csv
-# Il dizionario genera i suoi csv, e sono dati pubblicati.
-!dizionario/dist/*.csv
-!dizionario/sito/dati/*.csv
 
 .env
 __pycache__/

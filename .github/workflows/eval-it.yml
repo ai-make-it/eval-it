@@ -1,16 +1,6 @@
 name: eval-it
 
-# Il dizionario ha la sua CI in dizionario.yml: le due cartelle non
-# condividono codice e non condividono nemmeno i controlli.
-on:
-  push:
-    paths-ignore:
-      - "dizionario/**"
-      - ".github/workflows/dizionario*.yml"
-  pull_request:
-    paths-ignore:
-      - "dizionario/**"
-      - ".github/workflows/dizionario*.yml"
+on: [push, pull_request]
 
 # Nessun passo qui scrive niente: serve solo leggere il codice.
 permissions:

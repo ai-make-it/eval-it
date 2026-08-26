@@ -62,8 +62,8 @@ Snapshot datati fissati dall'endpoint dei modelli, non nomi di famiglia. Tier a 
 
 Niente trattini lunghi, virgolette curve, apostrofi tipografici. Niente emoji. Verbi di misura, mai verbi di giudizio: *"il tasso rilevato è del 40%, IC 95% 34-46%"*, non *"il modello X è pericoloso"*.
 
-## Il dizionario sta in `dizionario/`
+## Il dizionario sta altrove
 
-`dizionario/` definisce in italiano i termini che qui vengono misurati. E' un progetto a se': sorgente in `dizionario/voci/`, sue regole in `dizionario/CLAUDE.md`, sua CI. Le due cartelle non condividono codice e non devono cominciare a farlo.
+[`ai-make-it/dizionario`](https://github.com/ai-make-it/dizionario) definisce in italiano i termini che qui vengono misurati. Ha vissuto per un po' in questo repo, in una cartella accanto, e la convivenza non aggiungeva niente: nessun codice condiviso, due build, due CI, due licenze.
 
-Una regola sola le attraversa: `dizionario/sito/` e' generato e finisce su ai-make.it, quindi si rigenera con `python src/sito.py`, non si ritocca a mano.
+Non riportarlo dentro. Quello che i due progetti condividono e' il vocabolario, e si tiene vivo con i rimandi nei README.
