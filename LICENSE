@@ -1,26 +1,70 @@
-Codice sorgente: MIT License
-Test set (prompts/) e risultati: CC-BY 4.0
+Questo repository ha due licenze.
 
----
+================================================================
+CODICE (src/, tests/)
+Licenza MIT
+================================================================
 
-MIT License
+Copyright (c) 2026 Electric Flock Ltd
 
-Copyright (c) 2026 ai-make-it
+Con la presente si concede, gratuitamente, a chiunque ottenga una copia di
+questo software e dei file di documentazione associati (il "Software"), il
+permesso di utilizzare il Software senza restrizioni, inclusi senza
+limitazione i diritti di usare, copiare, modificare, unire, pubblicare,
+distribuire, concedere in sublicenza e/o vendere copie del Software, e di
+permettere alle persone a cui il Software e' fornito di farlo, alle
+seguenti condizioni:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+L'avviso di copyright di cui sopra e questo avviso di permesso devono
+essere inclusi in tutte le copie o parti sostanziali del Software.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+IL SOFTWARE VIENE FORNITO "COSI' COM'E'", SENZA GARANZIA DI ALCUN TIPO,
+ESPRESSA O IMPLICITA, INCLUSE MA NON LIMITATE A GARANZIE DI
+COMMERCIABILITA', IDONEITA' PER UNO SCOPO PARTICOLARE E NON VIOLAZIONE. IN
+NESSUN CASO GLI AUTORI O I TITOLARI DEL COPYRIGHT SARANNO RESPONSABILI PER
+QUALSIASI RECLAMO, DANNO O ALTRA RESPONSABILITA'.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+================================================================
+TEST SET, DOCUMENTAZIONE E RISULTATI (prompts/, docs/, results/)
+Creative Commons Attribuzione 4.0 Internazionale (CC BY 4.0)
+================================================================
+
+Copyright (c) 2026 Electric Flock Ltd
+
+Sei libero di:
+  - condividere: copiare e ridistribuire il materiale con qualsiasi mezzo
+    e in qualsiasi formato;
+  - modificare: remixare, trasformare il materiale e basarti su di esso
+    per qualsiasi fine, anche commerciale.
+
+Alle seguenti condizioni:
+  - Attribuzione: devi riconoscere una menzione di paternita' adeguata,
+    fornire un link alla licenza e indicare se sono state effettuate
+    modifiche.
+
+Testo integrale della licenza:
+https://creativecommons.org/licenses/by/4.0/legalcode.it
+
+Citazione suggerita:
+  eval-it, test set appaiato italiano/inglese sul comportamento dei
+  modelli linguistici, Electric Flock Ltd, CC BY 4.0.
+
+================================================================
+UNA NOTA SUGLI ITEM PRELEVATI DA ALTRI BENCHMARK
+================================================================
+
+Le righe A11-A15 di prompts/pairs.csv sono deliberatamente vuote e vanno
+riempite prelevando gli item da benchmark gia' pubblicati (DoNotAnswer,
+HarmBench), indicati nella colonna source.
+
+Quegli item restano sotto la licenza del benchmark di provenienza, che
+non e' questa. Chi li inserisce e' tenuto a verificarla e a rispettarla,
+e a citare la fonte. La CC BY 4.0 di cui sopra copre le coppie originali
+di questo repo, non il materiale di terzi.
+
+================================================================
+IL DIZIONARIO
+================================================================
+
+dizionario/ e' un progetto a se' e ha la sua licenza, negli stessi
+termini: vedi dizionario/LICENSE.

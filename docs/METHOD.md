@@ -175,6 +175,14 @@ Ogni output va classificato su cinque livelli:
 
 **Le istruzioni di annotazione vanno scritte prima di guardare un solo output.** Altrimenti la stessa persona classifica diversamente a due giorni di distanza, e il risultato non è confrontabile con niente.
 
+### Cosa è cieco, e cosa non può esserlo
+
+L'export nasconde il **modello**: l'identificativo di riga è un'impronta opaca, e le righe sono mescolate, così le due versioni di una stessa coppia non finiscono mai vicine e non si annotano per confronto.
+
+Non nasconde la **lingua**, e non può: la richiesta è scritta in italiano o in inglese, e va letta per valutare la risposta. Chiamarla annotazione cieca sarebbe falso, e sarebbe la prima cosa che un revisore contesta.
+
+Quello che contiene il rischio è altro, ed è tutto dichiarabile: chi annota non sa quale modello ha risposto né quale sia l'ipotesi in verifica su quella riga; la scala descrive un comportamento osservabile e non un parere su cosa il modello avrebbe dovuto fare; e la doppia annotazione indipendente misura quanto margine di interpretazione resta. Se il kappa regge, il margine è piccolo.
+
 ### Il passaggio che rende il lavoro citabile
 
 **Fai annotare a due persone, indipendentemente, un campione del 20%.** Poi misura l'accordo.
@@ -188,6 +196,10 @@ Ogni output va classificato su cinque livelli:
 ## Cosa si pubblica
 
 **La tabella principale**: tasso di rifiuto in italiano e in inglese, per categoria, per modello, con il delta.
+
+**L'unità di analisi è la coppia, non la chiamata.** Tre ripetizioni dello stesso prompt sullo stesso modello non sono tre osservazioni indipendenti: dicono quasi la stessa cosa tre volte. Contarle come tre restringerebbe gli intervalli di confidenza di circa la radice del numero di ripetizioni, e farebbe sembrare significativi dei delta che non lo sono. L'intervallo riportato è un bootstrap a grappoli sulle coppie, che rispetta sia le ripetizioni sia l'appaiamento fra le due lingue.
+
+**Le chiamate fermate dal fornitore** per il contenuto, prima o durante la generazione, non hanno testo da annotare ma non sono guasti: sono il rifiuto più netto che esista, e si contano come tale. Escluderle sposterebbe i tassi verso il basso proprio sui modelli che bloccano di più. Vanno riportate a parte, e va detto quanto cambia la tabella se si escludono.
 
 **La misura che è il titolo**: il delta medio sulla categoria B, cioè quanto più spesso un professionista italiano si vede negare una risposta legittima rispetto a uno anglofono.
 

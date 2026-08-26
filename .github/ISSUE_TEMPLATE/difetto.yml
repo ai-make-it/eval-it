@@ -1,0 +1,37 @@
+name: Un difetto nel codice o nel metodo
+description: Qualcosa non funziona, o funziona ma e' sbagliato
+labels: ["difetto"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Per un problema che espone credenziali o dati **non usare questo
+        modulo**: vedi `SECURITY.md`.
+
+        Un errore nel metodo vale quanto un errore nel codice, e spesso di
+        piu': se pensi che un intervallo di confidenza, il calcolo
+        dell'accordo o il trattamento delle chiamate bloccate siano
+        sbagliati, questo e' il posto giusto.
+  - type: textarea
+    id: cosa
+    attributes:
+      label: Cosa succede
+    validations:
+      required: true
+  - type: textarea
+    id: atteso
+    attributes:
+      label: Cosa dovrebbe succedere
+    validations:
+      required: true
+  - type: textarea
+    id: riprodurre
+    attributes:
+      label: Come si riproduce
+      description: >-
+        Il provider `mock` esegue la pipeline intera senza chiavi: se il
+        difetto si vede anche li', dillo, e' molto piu' facile da inseguire.
+  - type: input
+    id: versione
+    attributes:
+      label: Versione di Python e commit

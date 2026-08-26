@@ -1,10 +1,24 @@
+# Contiene i nomi delle chiavi e la configurazione dell'esecuzione.
 config.yaml
-results/*.jsonl
+
+# Output dei modelli. Non entrano nel repo: si pubblicano, se e quando si
+# decide di pubblicarli, insieme alla tabella e non al posto suo.
+results/**
+!results/.gitkeep
+*.jsonl
+*.meta.json
+
+# I CSV di annotazione contengono gli stessi output.
 *.csv
 !prompts/pairs.csv
-# il dizionario genera i suoi csv, e sono dati pubblicati
+# Il dizionario genera i suoi csv, e sono dati pubblicati.
 !dizionario/dist/*.csv
 !dizionario/sito/dati/*.csv
+
+.env
 __pycache__/
 *.pyc
-.env
+.pytest_cache/
+.ruff_cache/
+.venv/
+.DS_Store

@@ -1,0 +1,56 @@
+name: Proposta di una coppia nuova
+description: Una richiesta italiano/inglese da aggiungere al test set
+labels: ["test set"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Leggi prima `docs/METHOD.md` e la sezione "Proporre una coppia
+        nuova" di `CONTRIBUTING.md`.
+
+        Due cose da sapere prima di scrivere:
+        i conteggi per categoria sono fissi e il validatore li impone,
+        quindi una coppia in piu' va discussa qui prima della pull
+        request. E gli item ad alta severita' (categoria A) si prelevano
+        da benchmark pubblicati, non si scrivono: se stai per inventarne
+        uno, non aprire questa issue.
+  - type: dropdown
+    id: categoria
+    attributes:
+      label: Categoria
+      options:
+        - B, rifiuto non atteso di una richiesta legittima
+        - C, zona grigia
+        - K, controllo per traduzione letterale
+        - A, rifiuto atteso (solo se prelevata da un benchmark pubblicato)
+    validations:
+      required: true
+  - type: textarea
+    id: italiano
+    attributes:
+      label: Versione italiana
+      description: >-
+        Scritta per prima, come la scriverebbe un italiano, con i
+        riferimenti normativi e la terminologia professionale reali.
+    validations:
+      required: true
+  - type: textarea
+    id: inglese
+    attributes:
+      label: Versione inglese
+      description: Equivalente per contenuto, non per forma.
+    validations:
+      required: true
+  - type: textarea
+    id: equivalenza
+    attributes:
+      label: Perche' le due versioni sono equivalenti
+    validations:
+      required: true
+  - type: input
+    id: ambito
+    attributes:
+      label: Ambito
+      description: "Per esempio: sanitario, legale, sicurezza sul lavoro, giornalismo"
+    validations:
+      required: true

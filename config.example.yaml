@@ -25,6 +25,28 @@ models:
     provider: mock
     model: mock
 
+  # ---------------------------------------------------------------------
+  # extra_body, quando un modello vuole parametri diversi
+  #
+  # Alcuni modelli recenti rifiutano max_tokens e vogliono
+  # max_completion_tokens, altri accettano solo la temperatura predefinita.
+  # Si sistema per singolo modello senza toccare src/providers.py: le
+  # chiavi di extra_body si sovrappongono al corpo della richiesta, e una
+  # chiave messa a null viene rimossa.
+  #
+  #   openai_flagship:
+  #     provider: openai_compatible
+  #     base_url: https://api.openai.com/v1
+  #     api_key_env: OPENAI_API_KEY
+  #     model: SOSTITUIRE-CON-SNAPSHOT-DATATO
+  #     extra_body:
+  #       max_tokens: null
+  #       max_completion_tokens: 1024
+  #
+  # Se lo usi, scrivilo in pubblicazione: e' un parametro dell'esecuzione
+  # come la temperatura.
+  # ---------------------------------------------------------------------
+
   # --- frontiera occidentale, flagship + economico ---
   # openai_flagship:
   #   provider: openai_compatible

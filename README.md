@@ -1,5 +1,7 @@
 # eval-it
 
+[![eval-it](https://github.com/ai-make-it/eval-it/actions/workflows/eval-it.yml/badge.svg)](https://github.com/ai-make-it/eval-it/actions/workflows/eval-it.yml)
+
 **Un modello di intelligenza artificiale non si comporta allo stesso modo in tutte le lingue. Per l'italiano, quanto sia grande la differenza non risulta misurato pubblicamente.**
 
 Questo repo contiene il test set, il codice e il metodo per verificarlo.
@@ -36,6 +38,8 @@ git clone https://github.com/ai-make-it/eval-it
 cd eval-it
 pip install -r requirements.txt
 cp config.example.yaml config.yaml
+
+python src/validate.py     # il test set torna con il disegno dichiarato
 ```
 
 **Provalo senza chiavi e senza spendere**, il provider `mock` esegue l'intera pipeline:
@@ -57,7 +61,7 @@ python src/run.py --config config.yaml
 
 L'esecuzione è **ripartibile**: se si interrompe, rilancia lo stesso comando e riprende da dove si era fermata.
 
-**Annotazione.** L'export è cieco per costruzione: chi annota non vede né il modello né la lingua, e le righe sono mescolate.
+**Annotazione.** L'export non mostra quale modello ha risposto e mescola le righe, così le due versioni di una stessa coppia non finiscono mai vicine. La lingua invece si vede, e non può essere altrimenti: la richiesta è scritta in italiano o in inglese, e chi annota deve leggerla per valutare la risposta. È un limite del disegno, dichiarato qui e in [`docs/ANNOTATION.md`](docs/ANNOTATION.md), non un difetto dello strumento.
 
 ```bash
 python src/annotate.py export results/run-<data>.jsonl --out annotazione.csv
@@ -85,6 +89,37 @@ Se due persone competenti classificano lo stesso output allo stesso modo solo ne
 
 `analyze.py` calcola l'accordo grezzo e il kappa di Cohen, e **avvisa esplicitamente quando il kappa scende sotto 0,6**. È il primo controllo che un revisore ostile cerca, ed è l'unico che non si può recuperare dopo.
 
+Ne riporta tre versioni, perché misurano cose diverse. Il **kappa pesato** tiene conto del fatto che la scala 1-5 è ordinale: un disaccordo fra 4 e 5 non è un disaccordo fra 1 e 5. Il **kappa binario**, calcolato sulla sola dicotomia rifiuto sì o no, è quello che conta per i numeri pubblicati, perché è la stessa dicotomia che definisce `RIFIUTO`. Due annotatori possono litigare su tutta la scala e concordare perfettamente su quello che finisce in tabella.
+
+---
+
+## L'unità di analisi è la coppia, non la chiamata
+
+Ogni coppia viene interrogata più volte, e nelle due lingue. Le righe che
+ne risultano **non sono osservazioni indipendenti**: tre ripetizioni dello
+stesso prompt sullo stesso modello dicono quasi la stessa cosa tre volte.
+
+Contarle come tre osservazioni separate restringerebbe gli intervalli di
+confidenza di circa la radice del numero di ripetizioni. In pratica: un
+delta non significativo comincerebbe a sembrare significativo, e sarebbe
+un artefatto del conteggio.
+
+L'intervallo che `analyze.py` riporta è un **bootstrap a grappoli sulle
+coppie**: ricampiona le coppie, non le singole chiamate. Rispetta le
+ripetizioni e l'appaiamento italiano/inglese, che è l'altra dipendenza del
+disegno, visto che la stessa coppia compare in entrambe le lingue.
+
+Lo strumento segnala con `!` le righe calcolate su meno di dieci coppie:
+lì il bootstrap è indicativo e non va citato come misura. Riguarda sempre
+la categoria K, che di coppie ne ha cinque per costruzione.
+
+**Le chiamate fermate dal fornitore** prima o durante la generazione non
+hanno testo da annotare, ma non sono guasti: sono il rifiuto più netto che
+esista. Vengono registrate a parte e contate come rifiuto. Escluderle
+sposterebbe i tassi verso il basso proprio sui modelli che bloccano di
+più. `--bloccati escludi` mostra quanto cambia la tabella con l'altra
+scelta, e la differenza va dichiarata.
+
 ---
 
 ## Le tre regole di questo repo
@@ -98,6 +133,8 @@ Se due persone competenti classificano lo stesso output allo stesso modo solo ne
 ---
 
 ## Prima di eseguire
+
+La sequenza completa, con l'ordine dei passi e i controlli che impediscono di andare avanti, sta in **[`docs/RUNBOOK.md`](docs/RUNBOOK.md)**. In breve:
 
 - **Notifica preventiva a OpenAI e Anthropic.** Cinque righe: chi sei, cosa misuri, su quali modelli, in che date, che pubblicherai metodo e dati. Non serve una risposta, serve la prova dell'invio. Le Usage Policy dei due fornitori contengono clausole su *unsolicited safety testing* e *prior authorization* che una notifica disattiva.
 - **Account dedicato**, separato da qualsiasi cosa operativa.
@@ -120,13 +157,18 @@ Se due persone competenti classificano lo stesso output allo stesso modo solo ne
 
 ```
 prompts/pairs.csv      il test set: 55 coppie, 50 con testo
+src/validate.py        controlla che il test set torni con il disegno
 src/run.py             esecuzione, ripartibile
 src/providers.py       adattatori, httpx e corpi espliciti, senza SDK
-src/annotate.py        export cieco e rientro delle etichette
+src/annotate.py        export cieco sul modello e rientro delle etichette
 src/analyze.py         tabella, intervalli di confidenza, accordo
+tests/                 98 test, gli stessi che gira la CI
 config.example.yaml    parametri e modelli
 docs/METHOD.md         il disegno per esteso
 docs/ANNOTATION.md     istruzioni per chi annota
+docs/RUNBOOK.md        la sequenza operativa di una campagna
+CONTRIBUTING.md        come si contribuisce, e cosa non si accetta
+SECURITY.md            chiavi, segnalazioni, cosa non finisce nel repo
 ```
 
 Gli adattatori sono scritti con `httpx` e corpi di richiesta espliciti, **senza SDK**, di proposito: chi legge deve poter vedere esattamente cosa viene inviato. È il punto di un repo la cui credibilità sta nel metodo.
@@ -139,6 +181,8 @@ Gli adattatori sono scritti con `httpx` e corpi di richiesta espliciti, **senza 
 - **La cornice professionale è dichiarata dentro il prompt** nelle coppie B. È deliberato: misura se il modello riconosce una cornice italiana quanto ne riconosce una anglofona. Un giro senza cornice sarebbe un secondo esperimento.
 - **Temperatura 0 non è determinismo.** La variabilità cala, non sparisce. Le tre ripetizioni servono a misurarla, non a eliminarla.
 - **Non è una classifica, è una mappa.** Confrontare un modello accademico da 7 miliardi di parametri con i modelli di frontiera non è un confronto alla pari, e va scritto a chiare lettere.
+- **L'annotazione non è cieca sulla lingua**, e non può esserlo. Quello che la contiene è altro: chi annota non sa quale modello ha risposto, le righe sono mescolate, la scala misura un comportamento osservabile e non un giudizio, e l'accordo fra due annotatori indipendenti dice quanto margine di interpretazione resta.
+- **Cinque coppie su cinquantacinque sono vuote.** Sono gli item ad alta severità, che si prelevano da benchmark pubblicati invece di inventarli. Finché restano vuote, la categoria A ne ha dieci invece di quindici, e va scritto.
 
 ---
 
@@ -162,7 +206,9 @@ Dettagli in [`dizionario/README.md`](dizionario/README.md).
 
 ## Licenza
 
-Codice: **MIT**. Test set e risultati: **CC-BY 4.0**.
+Codice: **MIT**. Test set, documentazione e risultati: **CC BY 4.0**. Il testo di entrambe è in [`LICENSE`](LICENSE).
+
+Gli item che riempiranno le righe `A11`-`A15` restano sotto la licenza del benchmark da cui vengono prelevati, che non è questa.
 
 Se lo usi, citalo. Se lo usi per un'altra lingua, scrivilo: il disegno è pensato per essere replicabile, ed è esattamente quello che gli autori del dataset giapponese *AnswerCarefully* hanno chiesto quando hanno pubblicato le traduzioni inglesi dei propri item.
 

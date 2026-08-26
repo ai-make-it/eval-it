@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: "eval-it: test set appaiato italiano/inglese sul comportamento dei modelli linguistici"
+message: "Se usi questo test set o questi risultati, citali cosi'."
+type: dataset
+abstract: >-
+  Test set appaiato italiano/inglese per misurare la differenza di
+  comportamento dei modelli linguistici fra le due lingue sullo stesso
+  contenuto: rifiuto atteso, rifiuto di richieste legittime, zona grigia
+  e controllo per traduzione letterale. Comprende il codice di
+  esecuzione, il flusso di annotazione cieca sul modello e l'analisi con
+  intervalli di confidenza e accordo tra annotatori.
+authors:
+  - name: "Electric Flock Ltd"
+repository-code: "https://github.com/ai-make-it/eval-it"
+license: CC-BY-4.0
+keywords:
+  - valutazione dei modelli linguistici
+  - sicurezza multilingue
+  - rifiuto eccessivo
+  - lingua italiana

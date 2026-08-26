@@ -1,0 +1,29 @@
+name: Un lavoro esistente che ci e' sfuggito
+description: Una misura pubblica del comportamento dei modelli in italiano che non abbiamo visto
+labels: ["bibliografia"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        E' il contributo piu' utile a questo repo. La premessa del
+        progetto e' che per l'italiano non risulti una misura pubblica di
+        questa differenza: se ne esiste una, il disegno del test deve
+        tenerne conto, e la premessa va corretta.
+  - type: input
+    id: riferimento
+    attributes:
+      label: Riferimento
+      description: Titolo, autori, anno, e un collegamento se e' pubblico
+    validations:
+      required: true
+  - type: textarea
+    id: cosa-misura
+    attributes:
+      label: Cosa misura, e su quali modelli
+    validations:
+      required: true
+  - type: textarea
+    id: sovrapposizione
+    attributes:
+      label: Dove si sovrappone a questo lavoro
+      description: Se lo rende ridondante, dillo. E' un'informazione utile.

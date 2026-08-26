@@ -1,0 +1,17 @@
+version: 2
+updates:
+  # Le action sono pinnate al commit: senza dependabot resterebbero ferme
+  # alla versione del giorno in cui sono state scritte.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    commit-message:
+      prefix: "ci"
+
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: monthly
+    commit-message:
+      prefix: "deps"

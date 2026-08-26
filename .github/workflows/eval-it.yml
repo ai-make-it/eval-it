@@ -1,0 +1,76 @@
+name: eval-it
+
+# Il dizionario ha la sua CI in dizionario.yml: le due cartelle non
+# condividono codice e non condividono nemmeno i controlli.
+on:
+  push:
+    paths-ignore:
+      - "dizionario/**"
+      - ".github/workflows/dizionario*.yml"
+  pull_request:
+    paths-ignore:
+      - "dizionario/**"
+      - ".github/workflows/dizionario*.yml"
+
+# Nessun passo qui scrive niente: serve solo leggere il codice.
+permissions:
+  contents: read
+
+concurrency:
+  group: eval-it-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  controlli:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.13"]
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version: ${{ matrix.python }}
+
+      - name: Dipendenze
+        run: pip install -r requirements.txt -r requirements-dev.txt
+
+      - name: Il test set deve essere coerente col disegno
+        run: python src/validate.py --severo
+
+      - name: Analisi statica
+        run: ruff check src tests
+
+      - name: Test
+        run: python -m pytest tests -q
+
+      # Il provider mock esegue la pipeline intera senza chiavi e senza
+      # spendere. Se questo passo si rompe, si e' rotto il percorso che il
+      # README chiede a chiunque di provare per primo.
+      - name: La pipeline gira da capo a fondo col provider mock
+        run: |
+          cp config.example.yaml config.yaml
+          python src/run.py --config config.yaml --models mock --dry-run
+          python src/run.py --config config.yaml --models mock \
+            --pairs B01 B02 B03 --out /tmp/prova.jsonl
+          python src/annotate.py export /tmp/prova.jsonl --out /tmp/prova.csv
+          test -s /tmp/prova.jsonl.meta.json
+
+      # Il repo e' pubblico e misura prodotti commerciali: una chiave o un
+      # file di risultati committati per sbaglio sono il danno peggiore.
+      - name: Niente segreti e niente risultati nel repo
+        if: matrix.python == '3.11'
+        run: |
+          set -e
+          if git ls-files | grep -E '^(config\.yaml|results/.*\.jsonl|.*\.env)$'; then
+            echo "::error::File che non devono stare nel repo."
+            exit 1
+          fi
+          if git ls-files -z | xargs -0 grep -lIE \
+             'sk-[A-Za-z0-9_-]{16,}|AKIA[0-9A-Z]{16}|AIza[0-9A-Za-z_-]{20,}|BEGIN [A-Z ]*PRIVATE KEY'; then
+            echo "::error::Qualcosa che somiglia a una credenziale."
+            exit 1
+          fi
+          echo "Nessun segreto nei file tracciati."
