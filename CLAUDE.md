@@ -43,8 +43,8 @@ Quattro campi, sempre gli stessi. Il criterio per accettare una voce nuova è un
 
 Date e autori nei file YAML: stanno in git, che li tiene meglio. Un secondo asse di classificazione oltre `settimana`: sembra sempre una buona idea e diventa sempre incoerente. Termini di marca: invecchiano in sei mesi.
 
-## Il progetto collegato, nella cartella accanto
+## Il progetto collegato
 
-`eval-it` (la radice di questo repo) misura quello che qui viene definito. Le due cose si citano a vicenda nei README e i rimandi vanno tenuti vivi.
+[`eval-it`](https://github.com/ai-make-it/eval-it) misura quello che qui viene definito. Le due cose si citano a vicenda nei README e i rimandi vanno tenuti vivi.
 
-Restano due progetti distinti, non uno solo con due cartelle: `dizionario/` ha il suo sorgente, la sua build, la sua CI e la sua licenza. Non importare codice dall'uno all'altro.
+Sono due repo separati. Hanno vissuto per un po' nello stesso repo, in due cartelle, e la convivenza non aggiungeva niente: nessun codice condiviso, due build, due CI, due licenze. Non ricominciare a mescolarli.

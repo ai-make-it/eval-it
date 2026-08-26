@@ -1,0 +1,45 @@
+name: dizionario
+
+on: [push, pull_request]
+
+# Nessun passo scrive sul repo: legge, rigenera in locale e confronta.
+permissions:
+  contents: read
+
+concurrency:
+  group: dizionario-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  valida:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+
+      - name: Validazione del dataset
+        run: python src/validate.py
+
+      - name: dist/ deve essere allineato al sorgente
+        run: |
+          python src/build.py
+          if ! git diff --quiet -- dist/; then
+            echo "::error::dist/ non e' allineato a voci/. Lancia python src/build.py e includi il risultato nella PR."
+            git diff --stat -- dist/
+            exit 1
+          fi
+
+      - name: sito/ deve essere allineato al sorgente
+        run: |
+          python src/sito.py
+          if ! git diff --quiet -- sito/; then
+            echo "::error::sito/ non e' allineato a voci/. Lancia python src/sito.py e includi il risultato nella PR."
+            git diff --stat -- sito/
+            exit 1
+          fi
+
+      - name: Nessun collegamento interno rotto
+        run: python src/collegamenti.py
