@@ -1,3 +1,3 @@
 # Solo per sviluppo e CI. Per eseguire il test set basta requirements.txt.
 pytest>=8.0
-ruff>=0.6
+ruff>=0.16.9
